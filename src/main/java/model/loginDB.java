@@ -21,7 +21,6 @@ public class loginDB {
             if(result.next()){
                 return true;
             }
-            con.close();
 
 
         } catch (Exception e) {

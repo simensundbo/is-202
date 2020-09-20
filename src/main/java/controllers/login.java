@@ -21,12 +21,14 @@ public class login extends HttpServlet {
         String pass =req.getParameter("pass");
 
         loginDB db = new loginDB();
+
         if(db.validate(uname, pass)){
 
             res.sendRedirect("welcome.html");
 
         }else {
-            out.println("<p>Feil brukernavn eller passord.</p>");
+
+            res.sendRedirect("loginError.html");
 
         }
 
