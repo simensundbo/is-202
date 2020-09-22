@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectionProvider {   //singleton design pattern.
-    private static Connection con=null;
+    private static Connection con;
 
     static {
         try {
