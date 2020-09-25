@@ -12,6 +12,7 @@ public class ConnectionProvider {   //singleton design pattern.
             con = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/test","simen","is201");
 
         } catch (Exception e) {
+            System.out.println("Tilkoblingen feilet.");
         }
 
     }

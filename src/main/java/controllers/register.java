@@ -1,7 +1,9 @@
 package controllers;
 
 import model.ConnectionProvider;
+import model.UserModel;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +29,22 @@ public class register extends HttpServlet {
         String u=req.getParameter("uname");
         String p=req.getParameter("pass");
 
+        UserModel model = new UserModel();
 
+        model.setName(u);
+        model.setPass(p);
 
-        try {
+        boolean status = model.registerUser();
+
+        if(status) {
+            RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
+            rd.forward(req, res);
+        } else {
+            RequestDispatcher rd=req.getRequestDispatcher("loginError.jsp");
+            rd.forward(req, res);
+        }
+
+        /*try {
             Connection con = ConnectionProvider.getCon();
             PreparedStatement li = con.prepareStatement(sql);
 
@@ -38,14 +53,16 @@ public class register extends HttpServlet {
 
             int r = li.executeUpdate();
             if (r>0) {
-                res.sendRedirect("welcome.html");
+                res.sendRedirect("welcome.jsp");
             }
 
 
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        } catch (SQLException f) {
+            f.printStackTrace();
+        }*/
+
+        out.close();
 
     }
 

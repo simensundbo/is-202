@@ -4,14 +4,13 @@ import java.sql.*;
 
 
 public class loginDB {
-    private String sql = "SELECT * FROM test.login where uname=? and pass=?";
+    private String userLoginSql = "SELECT * FROM test.login where uname=? and pass=?";
 
     public boolean validate(String uname,String pass){
 
-
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement li = con.prepareStatement(sql);
+            PreparedStatement li = con.prepareStatement(userLoginSql);
 
             li.setString(1, uname);
             li.setString(2, pass);
