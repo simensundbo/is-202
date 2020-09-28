@@ -38,7 +38,7 @@ public class UserModel {
             ps.setString(2, getPass());
 
             int r = ps.executeUpdate();
-            if (r>0) {
+            if (r!=0) {
                 return true;
             }
 

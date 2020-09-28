@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="css/styles.css" >
 </head>
 <body>
     <p>Feil brukernavn eller passord. Prøv på nytt.</p>

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -37,6 +38,8 @@ public class register extends HttpServlet {
         boolean status = model.registerUser();
 
         if(status) {
+            HttpSession session = req.getSession();
+            session.setAttribute("user", model.getName());
             RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
             rd.forward(req, res);
         } else {
