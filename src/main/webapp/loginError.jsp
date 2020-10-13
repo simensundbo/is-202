@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="css/styles.css" >
 </head>
 <body>
-    <p>Feil brukernavn eller passord. Prøv på nytt.</p>
-    <button type="button"> <a href="index.jsp"/> Prøv igjen!</button>
-
+    <div>
+        <h1 class="#">Feil brukernavn eller passord. Prøv på nytt!</h1>
+        <a href="index.jsp" class="btn">Prøv igjen!</a>
+    </div>
 </body>
 </html>

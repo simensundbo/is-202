@@ -1,10 +1,10 @@
-package controllers;
+package helpers;
 
 public class navbar {
     public static String nav = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n" +
             "        <nav class=\"navbar navbar-light bg-light\">\n" +
             "            <a class=\"navbar-brand\" href=\"index.jsp\">\n" +
-            "                <img src=\"norges%20roforbund.png\" width=\"\" height=\"50\">\n" +
+            "                <img src=\"images/norges%20roforbund.png\" width=\"\" height=\"50\">\n" +
             "            </a>\n" +
             "        </nav>\n" +
             "        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
@@ -30,8 +30,6 @@ public class navbar {
             "            </ul>\n" +
             "        </div>\n" +
             "    </nav>";
-
-
 
     }
 

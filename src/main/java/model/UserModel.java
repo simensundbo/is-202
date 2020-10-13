@@ -8,9 +8,10 @@ import java.sql.SQLException;
 public class UserModel {
     private String Name;
     private String pass;
+    private String userRole;
 
-    private final String registerUserSql = "insert into test.login (uname, pass) values (?,?)";
-    private final String userLoginSql = "SELECT * FROM test.login where uname=? and pass=?";
+    private final String registerUserSql = "insert into test202.login (uname, pass) values (?,?)";
+    private final String userLoginSql = "SELECT * FROM test202.login where uname=? and pass=?";
 
     public String getName() {
         return Name;
@@ -26,6 +27,14 @@ public class UserModel {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
 
@@ -51,12 +60,12 @@ public class UserModel {
     public boolean loginUser() {
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement li = con.prepareStatement(userLoginSql);
+            PreparedStatement ps = con.prepareStatement(userLoginSql);
 
-            li.setString(1, getName());
-            li.setString(2, getPass());
+            ps.setString(1, getName());
+            ps.setString(2, getPass());
 
-            ResultSet result = li.executeQuery();
+            ResultSet result = ps.executeQuery();
 
             if(result.next()){
                 return true;
