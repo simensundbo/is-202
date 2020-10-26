@@ -18,6 +18,7 @@ import java.io.PrintWriter;
 public class login extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
+
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
 
@@ -36,6 +37,7 @@ public class login extends HttpServlet {
             session.setAttribute("user", model.getName());
             RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
             rd.forward(req, res);
+
         } else {
             RequestDispatcher rs = req.getRequestDispatcher("loginError.jsp");
             //req.setAttribute("");
@@ -49,7 +51,7 @@ public class login extends HttpServlet {
         if (db.validate(uname, pass)) {
 
             RequestDispatcher rs = req.getRequestDispatcher("welcome.jsp");
-            rs.forward(req, res);
+           rs.forward(req, res);
             //res.sendRedirect("welcome.jsp");
 
         } else {
@@ -58,7 +60,6 @@ public class login extends HttpServlet {
 
         }
         */
-
 
         out.close();
     }

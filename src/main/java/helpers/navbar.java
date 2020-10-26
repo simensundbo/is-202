@@ -3,14 +3,14 @@ package helpers;
 public class navbar {
     public static String nav = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n" +
             "        <nav class=\"navbar navbar-light bg-light\">\n" +
-            "            <a class=\"navbar-brand\" href=\"index.jsp\">\n" +
+            "            <a class=\"navbar-brand\" href=\"#\">\n" +
             "                <img src=\"images/norges%20roforbund.png\" width=\"\" height=\"50\">\n" +
             "            </a>\n" +
             "        </nav>\n" +
             "        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
             "            <ul class=\"navbar-nav mr-auto\">\n" +
             "                <li class=\"nav-item active\">\n" +
-            "                    <a class=\"nav-link\" href=\"welcome.jsp\">Startside<span class=\"sr-only\">(current)</span></a>\n" +
+            "                    <a class=\"nav-link\" href=\"welcome.jsp\">Startside <span class=\"sr-only\">(current)</span></a>\n" +
             "                </li>\n" +
             "                <li class=\"nav-item\">\n" +
             "                    <a class=\"nav-link\" href=\"#\">Profil</a>\n" +
@@ -20,10 +20,11 @@ public class navbar {
             "                        Meny\n" +
             "                    </a>\n" +
             "                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n" +
-            "                        <a class=\"dropdown-item\" href=\"#\">Resultater</a>\n" +
-            "                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n" +
+            "                        <a class=\"dropdown-item\" href=\"#\">Utøvere</a>\n" +
+            "                            <a class=\"dropdown-item\" href=\"#\">Klubber</a>\n" +
+            "                        <a class=\"dropdown-item\" href=\"https://www.roing.no/\">Norges Roforbund</a>\n" +
             "                        <div class=\"dropdown-divider\"></div>\n" +
-            "                        <a class=\"dropdown-item\" href=\"#\">Logg ut</a>\n" +
+            "                        <a class=\"dropdown-item\" href=\"index.jsp\">Logg ut</a>\n" +
             "                    </div>\n" +
             "                </li>\n" +
             "\n" +

@@ -1,6 +1,5 @@
 package controllers;
 
-import model.ConnectionProvider;
 import model.UserModel;
 
 import javax.servlet.RequestDispatcher;
@@ -18,8 +17,6 @@ import java.sql.SQLException;
 
 @WebServlet(name = "register", urlPatterns = "/register")
 public class register extends HttpServlet {
-    private String sql = "insert into test.login (uname, pass) values (?,?)";
-
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
 

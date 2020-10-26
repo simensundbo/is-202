@@ -17,24 +17,34 @@
     out.println(navbar.nav);
 %>
 
-    <h3>
+    <h1>
         Velkommen ${user}<br>
-        Dette blir da hjemmesiden!
-    </h3>
+    </h1>
 
-    <div class="search-box">
-        <h3>Søk blant 100000 utøvere</h3>
-        <form action="#" method="get">
-            <div class="textbox">
-                <input type="text" placeholder="Utøver" name="#">
-            </div>
-            <div class="textbox">
-                <input type="text" placeholder="Test" name="#">
-            </div>
-            <input class="btn" type="submit" value="Søk">
-
-        </form>
+    <div class="row">
+        <div class="box">
+            <h2>Siste resultater</h2>
+            <p>
+                Se resultatene fra siste test. <br>
+                <a href="#" class="btn">Siste resultater!</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Alle resultater</h2>
+            <p>
+                Se alle tidligere resultater. <br>
+                <a href="#" class="btn">Resultater!</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Top resultater</h2>
+            <p>
+                Se de beste resultatene fra hver klasse. <br>
+                <a href="#" class="btn">Resultater!</a>
+            </p>
+        </div>
     </div>
+
 
 
 
