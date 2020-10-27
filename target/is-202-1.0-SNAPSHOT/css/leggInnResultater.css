@@ -4,7 +4,6 @@ body {
     font-family: sans-serif;
     background-color: beige;
     height: 100vh;
-    overflow: hidden;
 }
 .regform {
     position: absolute;
