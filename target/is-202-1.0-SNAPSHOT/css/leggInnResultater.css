@@ -24,7 +24,7 @@ body {
 }
 .regform h1{
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 0;
     color: navy;
 }
@@ -113,7 +113,7 @@ body {
 }
 .treløpTid{
     position: relative;
-    left: 153px;
+    left: 154px;
     height: 20px;
     width: 80px;
     font-size: 15px;
@@ -148,7 +148,7 @@ body {
 }
 .sekstiWatt{
     position: relative;
-    left: 192px;
+    left: 193px;
     height: 20px;
     width: 80px;
     font-size: 15px;
