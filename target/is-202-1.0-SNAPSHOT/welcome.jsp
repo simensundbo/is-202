@@ -33,7 +33,7 @@
             <h2>Alle resultater</h2>
             <p>
                 Se alle tidligere resultater. <br>
-                <a href="#" class="btn">Resultater!</a>
+                <a href="søkResultater.jsp" class="btn">Resultater!</a>
             </p>
         </div>
         <div class="box">
