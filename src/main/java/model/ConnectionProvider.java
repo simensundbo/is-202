@@ -9,7 +9,7 @@ public class ConnectionProvider {   //singleton design pattern.
     static {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/test202","andreas","kalender1");
+            con = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/test202","simen","simen123");
 
         } catch (Exception e) {
             System.out.println("Tilkoblingen feilet.");
