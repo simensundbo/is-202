@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     background-color: beige;
+    background-image: url("../images/vann.jpg");
     height: 100vh;
 }
 .regform {
