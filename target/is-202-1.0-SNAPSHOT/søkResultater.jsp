@@ -17,7 +17,7 @@
         <h1>Søk etter resultater</h1>
         <h2>Filtrer ditt søk</h2>
         <div class="Filter">
-            <select class="Klubb">
+            <select class="Klubb" name="Klubb">
                 <option disabled="disabled" selected="selected">Klubb</option>
                 <option> Alle </option>
                 <option> Arendals Roklubb </option>
@@ -27,7 +27,7 @@
                 <option> Porsgrunn Roklubb </option>
             </select>
 
-            <select class="Utøver">
+            <select class="Utøver" name="Utøver">
                 <option disabled="disabled" selected="selected">Utøver</option>
                 <option> Alle </option>
                 <option> Anders Korsnes </option>
@@ -36,8 +36,9 @@
                 <option> Martin Løvberg </option>
                 <option> Simen Sundbø </option>
             </select>
-
-            <select class="Klasse">
+        </div>
+        <div class="KlasseUkeÅr">
+            <select class="Klasse" name="Klasse">
                 <option disabled="disabled" selected="selected">Klasse</option>
                 <option> Senior menn </option>
                 <option> Senior kvinner </option>
@@ -48,16 +49,14 @@
                 <option> Junior C gutter </option>
                 <option> Junior C jenter </option>
             </select>
-            <br>
-        </div>
-        <div class="ÅrogUke">
-            <select class="Uke">
+
+            <select class="Uke" name="Uke">
                 <option disabled="disabled" selected="selected">Uke</option>
                 <option> Uke 2 </option>
                 <option> Uke 11 </option>
                 <option> Uke 44 </option>
             </select>
-            <select class="År">
+            <select class="År" name="År">
                 <option disabled="disabled" selected="selected">År</option>
                 <option> 2020 </option>
                 <option> 2019 </option>

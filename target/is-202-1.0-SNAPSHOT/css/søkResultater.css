@@ -15,9 +15,9 @@ body {
     margin-top: 10px;
     margin-bottom: 30px;
     transform: translate(-50%, -50%);
-    width: 480px;
+    width: 550px;
     background: white;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 .søkform form {
     padding: 20px;
@@ -26,64 +26,64 @@ body {
 .søkform h1 {
     text-align: center;
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 25px;
     color: navy;
 }
 .søkform h2{
     position: relative;
-    font-size: 18px;
+    font-size: 19px;
     color: navy;
-    left: 42px;
+    left: 30px;
     margin-bottom: 5px;
     margin-top: 30px;
 }
 .Filter{
     position: relative;
-    left: 42px;
+    left: 30px;
     margin-top: 2px;
 }
 .Klubb{
-    height: 24px;
+    height: 26px;
     font-size: 18px;
-    width: 120px;
+    width: 220px;
 }
 .Utøver{
-    height: 24px;
+    height: 26px;
     font-size: 18px;
-    width: 120px;
+    width: 220px;
+}
+.KlasseUkeÅr{
+    position: relative;
+    left: 30px;
+    margin-top: 10px;
 }
 .Klasse{
-    height: 24px;
+    height: 26px;
     font-size: 18px;
-    width: 120px;
+    width: 150px;
+}
+.År{
+    height: 26px;
+    font-size: 18px;
+    width: 85px;
+}
+.Uke{
+    height: 26px;
+    font-size: 18px;
+    width: 85px;
 }
 .søk{
     margin-top: 10px;
 }
-.ÅrogUke{
-    position: relative;
-    left: 42px;
-    margin-top: 8px;
-}
-.År{
-    height: 24px;
-    font-size: 18px;
-    width: 90px;
-}
-.Uke{
-    height: 24px;
-    font-size: 18px;
-    width: 90px;
-}
 .søk{
     position: absolute;
-    left: 172px;
-    width: 30%;
+    left: 210px;
+    width: 130px;
     margin-top: 30px;
-    height: 30px;
+    height: 35px;
     border: 1px solid;
     background: green;
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 600;

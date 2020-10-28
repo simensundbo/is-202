@@ -105,8 +105,8 @@
             <input class="kroppshev" type="text" placeholder="Antall" name="Kroppshev"><br>
         </div>
         <div>
-            <button class="LeggInnFlere" type="submit">Legg inn flere</button><br>
-            <button class="SendInn" type="submit">Send inn</button>
+            <button class="LeggInnFlere" type="submit" name="LeggInnFlere">Legg inn flere</button><br>
+            <button class="SendInn" type="submit" name="SendInn">Send inn</button>
         </div>
     </form>
 </div>
