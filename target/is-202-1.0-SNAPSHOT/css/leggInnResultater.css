@@ -247,3 +247,9 @@ body {
     cursor: pointer;
     outline: none;
 }
+.Resultater{
+
+}
+.Resultater input{
+    width: 80px;
+}
