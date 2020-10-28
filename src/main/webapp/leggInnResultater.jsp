@@ -60,47 +60,47 @@
             </select>
         </div>
         <h3>Legg inn resultater</h3>
-        <div class="femtusen">
+        <div class="Resultater">
             <label class="femtusenlabel">5000 meter</label>
             <input class="femTid" type="text" placeholder="Tid" name="5000tid">
 
             <input class="femWatt" type="text" placeholder="Watt" name="5000watt"><br>
         </div>
-        <div class="tretusen">
+        <div class="Resultater">
             <label class="tretusenlabel">3000 meter</label>
-            <input class="treTid" type="text" placeholder="Tid" name="3000tid">
+            <input class="treTid" type="text" placeholder="Tid" name="3000tid"><br>
         </div>
-        <div class="totusen">
+        <div class="Resultater">
             <label class="totusenlabel">2000</label>
             <input class="toTid" type="text" placeholder="Tid" name="2000tid">
 
             <input class="toWatt" type="text" placeholder="Watt" name="2000watt"><br>
         </div>
-        <div class="seksti">
+        <div class="Resultater">
             <label class="sekstiwattlabel">60"</label>
             <input class="sekstiWatt" type="text" placeholder="Watt" name="60watt"><br>
         </div>
-        <div class="liggro">
+        <div class="Resultater">
             <label class="liggrolabel">Liggende rotak</label>
             <input class="liggroKilo" type="text" placeholder="Kilo" name="LiggroKilo">
 
             <input class="liggroProsent" type="text" placeholder="Prosent" name="LiggroProsent"><br>
         </div>
-        <div class="knebøy">
+        <div class="Resultater">
             <label class="knebøyKilolabel">Knebøy</label>
             <input class="knebøyKilo" type="text" placeholder="Kilo" name="KnebøyKilo">
 
             <input class="knebøyProsent" type="text" placeholder="Prosent" name="KnebøyProsent"><br>
         </div>
-        <div class="bevegelighetantall">
+        <div class="Resultater">
             <label class="bevegelighetlabel">Bevegelighet</label>
             <input class="bevegelighet" type="text" placeholder="Antall" name="Bevegelighet"><br>
         </div>
-        <div class="sargeantcm">
+        <div class="Resultater">
             <label class="sargeantlabel">Sargeant</label>
             <input class="sargeant" type="text" placeholder="Cm" name="Sargeant"><br>
         </div>
-        <div class="kroppshevantall">
+        <div class="Resultater">
             <label class="kroppshevlabel">Kroppshev</label>
             <input class="kroppshev" type="text" placeholder="Antall" name="Kroppshev"><br>
         </div>

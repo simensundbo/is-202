@@ -10,7 +10,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 640px;
+    height: 630px;
     margin-top: 10px;
     margin-bottom: 30px;
     transform: translate(-50%, -50%);
@@ -43,7 +43,7 @@ body {
     height: 20px;
     width: 180px;
     font-size: 16px;
-    margin-left: 5px;
+    margin-left: 0;
 }
 .År{
     height: 20px;
@@ -71,14 +71,14 @@ body {
 }
 .femTid{
     position: relative;
-    left: 180px;
+    left: 135px;
     height: 20px;
     width: 80px;
     font-size: 15px;
 }
 .femWatt{
     position: relative;
-    margin-left: 180px;
+    margin-left: 135px;
     height: 20px;
     width: 80px;
     font-size: 15px;
@@ -87,12 +87,12 @@ body {
     position: relative;
     left: 70px;
 }
-.tretusen{
+.Resultater{
     margin-top: 3px;
 }
 .treTid{
     position: relative;
-    left: 180px;
+    left: 135px;
     height: 20px;
     width: 80px;
     font-size: 15px;
@@ -108,9 +108,6 @@ body {
     position: relative;
     left: 70px;
 }
-.tretusenløp{
-    margin-top: 3px;
-}
 .treløpTid{
     position: relative;
     left: 154px;
@@ -121,9 +118,6 @@ body {
 .tretusenløplabel{
     position: relative;
     left: 70px;
-}
-.totusen{
-    margin-top: 3px;
 }
 .toTid{
     position: relative;
@@ -143,9 +137,6 @@ body {
     position: relative;
     left: 70px;
 }
-.seksti{
-    margin-top: 3px;
-}
 .sekstiWatt{
     position: relative;
     left: 193px;
@@ -156,9 +147,6 @@ body {
 .sekstiwattlabel{
     position: relative;
     left: 70px;
-}
-.liggro{
-    margin-top: 3px;
 }
 .liggroKilo{
     position: relative;
@@ -178,9 +166,6 @@ body {
     position: relative;
     left: 70px;
 }
-.knebøy{
-    margin-top: 3px;
-}
 .knebøyKilo{
     position: relative;
     left: 161px;
@@ -199,9 +184,6 @@ body {
     position: relative;
     left: 70px;
 }
-.bevegelighetantall{
-    margin-top: 3px;
-}
 .bevegelighet{
     position: relative;
     left: 124px;
@@ -213,9 +195,6 @@ body {
     position: relative;
     left: 70px;
 }
-.sargeantcm{
-    margin-top: 3px;
-}
 .sargeant{
     position: relative;
     left: 151px;
@@ -226,9 +205,6 @@ body {
 .sargeantlabel{
     position: relative;
     left: 70px;
-}
-.kroppshevantall{
-    margin-top: 3px;
 }
 .kroppshev{
     position: relative;
