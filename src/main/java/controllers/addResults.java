@@ -35,7 +35,6 @@ public class addResults extends HttpServlet {
         String sargeant=req.getParameter("Sargeant");
         String kroppshev=req.getParameter("Kroppshev");
 
-
     }
 
 }
