@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
+    background-image: url("../images/vann.jpg");
 }
 
 .login-box {
@@ -68,5 +69,4 @@ a {
     width: 33.33%;
     padding: 15px;
 }
-
 
