@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     background-color: beige;
+    background-image: url("../images/vann.jpg");
     height: 100vh;
 }
 .regform {
@@ -246,15 +247,13 @@ body {
     cursor: pointer;
     outline: none;
 }
-<<<<<<< Updated upstream
 .Resultater{
 
 }
-.Resultater input{
+.Resultater input {
     width: 80px;
-=======
-
-.regform input{
-
->>>>>>> Stashed changes
+}
+.tabell{
+    margin-left: 70px;
+    color: #2648ff;
 }

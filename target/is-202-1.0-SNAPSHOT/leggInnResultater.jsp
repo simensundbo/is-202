@@ -10,7 +10,6 @@
 <head>
     <title>Nye resultater</title>
     <link rel="stylesheet" href="css/leggInnResultater.css">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="regform">

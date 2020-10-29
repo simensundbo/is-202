@@ -247,15 +247,13 @@ body {
     cursor: pointer;
     outline: none;
 }
-<<<<<<< Updated upstream
 .Resultater{
 
 }
-.Resultater input{
+.Resultater input {
     width: 80px;
-=======
-
-.regform input{
-
->>>>>>> Stashed changes
+}
+.tabell{
+    margin-left: 70px;
+    color: #2648ff;
 }
