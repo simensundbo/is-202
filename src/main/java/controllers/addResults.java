@@ -17,7 +17,7 @@ public class addResults extends HttpServlet {
         String klubb=req.getParameter("Klubb");
         String fornavn=req.getParameter("Fornavn");
         String etternavn=req.getParameter("Etternavn");
-        String år=req.getParameter("År");
+        String år=req.getParameter("aar");
         String uke=req.getParameter("Uke");
         String klasse=req.getParameter("Klasse");
 
@@ -29,12 +29,21 @@ public class addResults extends HttpServlet {
         String sekstiwatt=req.getParameter("60watt");
         String liggroKilo=req.getParameter("LiggroKilo");
         String liggroProsent=req.getParameter("LiggroProsent");
-        String knebøykilo=req.getParameter("KnebøyKilo");
-        String knebøyprosent=req.getParameter("KnebøyProsent");
+        String knebøykilo=req.getParameter("KneboyKilo");
+        String knebøyprosent=req.getParameter("KneboyProsent");
         String bevegelighet=req.getParameter("Bevegelighet");
         String sargeant=req.getParameter("Sargeant");
         String kroppshev=req.getParameter("Kroppshev");
 
+<<<<<<< HEAD
+=======
+        int i = Integer.parseInt(år);
+
+
+
+
+
+>>>>>>> 1bc1e630ca8a09abd76ec0e0a4ade0f26fa1ac8a
     }
 
 }
