@@ -246,9 +246,15 @@ body {
     cursor: pointer;
     outline: none;
 }
+<<<<<<< Updated upstream
 .Resultater{
 
 }
 .Resultater input{
     width: 80px;
+=======
+
+.regform input{
+
+>>>>>>> Stashed changes
 }
