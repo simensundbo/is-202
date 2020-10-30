@@ -39,7 +39,7 @@
                         <option value="Arendals roklubb">Arendals roklubb</option>
                     </select>
                 </div>
-
+                <input type="hidden" name="method" value="register">
                 <input class="btn" type="submit" value="Registrer deg.">
             </form>
         </div>

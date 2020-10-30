@@ -31,12 +31,18 @@
                 <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
             </div>
         </div>
+<<<<<<< Updated upstream
         <h2>Velg test</h2>
         <div class="Filtrer">
             <select class="ÅrogUke" name="År">
+=======
+        <div class="ÅrogUkeFilter">
+            <h2>Velg test</h2>
+            <select class="År" name="aar">
+>>>>>>> Stashed changes
                 <option disabled="disabled" selected="selected">År</option>
                 <option value="2020"> 2020 </option>
-                <option value="2020"> 2019 </option>
+                <option value="2019"> 2019 </option>
             </select>
 
             <select class="ÅrogUke" name="Uke">
@@ -89,9 +95,9 @@
         </div>
         <div class="Resultater">
             <label>Knebøy</label>
-            <input type="text" placeholder="Kilo" name="KnebøyKilo">
+            <input type="text" placeholder="Kilo" name="KneboyKilo">
 
-            <input type="text" placeholder="Prosent" name="KnebøyProsent"><br>
+            <input type="text" placeholder="Prosent" name="KneboyProsent"><br>
         </div>
         <div class="Resultater">
             <label>Bevegelighet</label>

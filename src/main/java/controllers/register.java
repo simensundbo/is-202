@@ -17,9 +17,16 @@ import java.sql.SQLException;
 
 @WebServlet(name = "register", urlPatterns = "/register")
 public class register extends HttpServlet {
+
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
 
+        /*if(req.getAttribute("method") == "insert") {
+            insert(req, res);
+        } else if(req.getAttribute("method") == "login") {
+            login();
+            }
+        */
 
         res.setContentType("test/html");
         PrintWriter out = res.getWriter();
@@ -65,5 +72,10 @@ public class register extends HttpServlet {
         out.close();
 
     }
+
+    private void insert(HttpServletRequest req, HttpServletRequest res){
+
+    }
+
 
 }
