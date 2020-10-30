@@ -12,7 +12,7 @@
 
 <%
     if(session.getAttribute("user")==null) {
-        response.sendRedirect("views/index.jsp");
+        response.sendRedirect("index.jsp");
     }
     out.println(navbar.nav);
 %>
@@ -26,7 +26,7 @@
             <h2>Siste resultater</h2>
             <p>
                 Se resultatene fra siste test. <br>
-                <a href="#" class="btn">Siste resultater!</a>
+                <a href="sisteResultater.jsp" class="btn">Siste resultater!</a>
             </p>
         </div>
         <div class="box">

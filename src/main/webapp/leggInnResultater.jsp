@@ -26,27 +26,28 @@
                 <option value="Porsgrunn"> Porsgrunn Roklubb </option>
             </select>
             <br>
-            <input class="fornavn" type="text" placeholder="Fornavn" name="Fornavn">
-            <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
+            <div class="navn">
+                <input class="fornavn" type="text" placeholder="Fornavn" name="Fornavn">
+                <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
+            </div>
         </div>
-        <div class="ÅrogUkeFilter">
-            <h2>Velg test</h2>
-            <select class="År" name="År">
+        <h2>Velg test</h2>
+        <div class="Filtrer">
+            <select class="ÅrogUke" name="År">
                 <option disabled="disabled" selected="selected">År</option>
                 <option value="2020"> 2020 </option>
                 <option value="2020"> 2019 </option>
             </select>
 
-            <select class="Uke" name="Uke">
+            <select class="ÅrogUke" name="Uke">
                 <option disabled="disabled" selected="selected">Uke</option>
                 <option value="2"> Uke 2 </option>
                 <option value="11"> Uke 11 </option>
                 <option value="44"> Uke 44 </option>
             </select>
         </div>
-
-        <div>
-            <h2>Velg klasse</h2>
+        <h2>Velg klasse</h2>
+        <div class="Filtrer">
             <select class="Klasse" name="Klasse" id="Klasse">
                 <option disabled="disabled" selected="selected">Klasse</option>
                 <option value="Senior menn"> Senior menn </option>
@@ -104,7 +105,7 @@
             <label>Kroppshev</label>
             <input type="text" placeholder="Antall" name="Kroppshev"><br>
         </div>
-        <div>
+        <div class="Knapper">
             <button class="LeggInnFlere" type="submit" name="LeggInnFlere">Legg inn flere</button><br>
             <button class="SendInn" type="submit" name="SendInn">Send inn</button>
         </div>

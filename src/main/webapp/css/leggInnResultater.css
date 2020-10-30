@@ -3,7 +3,6 @@ body {
     padding: 0;
     font-family: sans-serif;
     background-color: beige;
-    background-image: url("../images/vann.jpg");
     height: 100vh;
 }
 .regform {
@@ -28,38 +27,6 @@ body {
     margin-top: 0;
     color: navy;
 }
-.Klubb{
-    height: 20px;
-    width: 120px;
-    font-size: 16px;
-}
-.fornavn{
-    height: 20px;
-    width: 180px;
-    font-size: 16px;
-    margin-top: 8px;
-}
-.etternavn{
-    height: 20px;
-    width: 180px;
-    font-size: 16px;
-    margin-left: 0;
-}
-.År{
-    height: 20px;
-    width: 80px;
-    font-size: 16px;
-}
-.Uke{
-    height: 20px;
-    width: 80px;
-    font-size: 16px;
-}
-.Klasse{
-    height: 20px;
-    width: 90px;
-    font-size: 16px;
-}
 .regform h2{
     font-size: 16px;
     color: navy;
@@ -69,191 +36,75 @@ body {
     text-align: center;
     color: navy;
 }
-.femTid{
-    position: relative;
-    left: 135px;
+.Filtrer select{
     height: 20px;
-    width: 80px;
-    font-size: 15px;
+    font-size: 16px;
 }
-.femWatt{
-    position: relative;
-    margin-left: 135px;
+.Klubb{
+    width: 120px;
+}
+.navn input{
+    width: 180px;
+    margin-top: 5px;
+    font-size: 16px;
     height: 20px;
+}
+.ÅrogUke{
     width: 80px;
-    font-size: 15px;
 }
-.femtusenlabel{
-    position: relative;
-    left: 70px;
+.Klasse{
+    width: 90px;
 }
-.Resultater{
+.Resultater {
     margin-top: 3px;
 }
-.treTid{
-    position: relative;
-    left: 135px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.treWatt{
-    position: relative;
-    margin-left: 180px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.tretusenlabel{
-    position: relative;
-    left: 70px;
-}
-.treløpTid{
-    position: relative;
-    left: 154px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.tretusenløplabel{
-    position: relative;
-    left: 70px;
-}
-.toTid{
-    position: relative;
-    left: 180px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.toWatt{
-    position: relative;
-    margin-left: 180px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.totusenlabel{
-    position: relative;
-    left: 70px;
-}
-.sekstiWatt{
-    position: relative;
-    left: 193px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.sekstiwattlabel{
-    position: relative;
-    left: 70px;
-}
-.liggroKilo{
-    position: relative;
-    left: 110px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.liggroProsent{
-    position: relative;
-    margin-left: 110px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.liggrolabel{
-    position: relative;
-    left: 70px;
-}
-.knebøyKilo{
-    position: relative;
-    left: 161px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.knebøyProsent{
-    position: relative;
-    margin-left: 161px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.knebøyKilolabel{
-    position: relative;
-    left: 70px;
-}
-.bevegelighet{
-    position: relative;
-    left: 124px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.bevegelighetlabel{
-    position: relative;
-    left: 70px;
-}
-.sargeant{
-    position: relative;
-    left: 151px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.sargeantlabel{
-    position: relative;
-    left: 70px;
-}
-.kroppshev{
-    position: relative;
-    left: 140px;
-    height: 20px;
-    width: 80px;
-    font-size: 15px;
-}
-.kroppshevlabel{
-    position: relative;
-    left: 70px;
+.Knapper button{
+    position: absolute;
+    left: 190px;
+    width: 25%;
+    height: 27px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
 }
 .LeggInnFlere{
-    position: absolute;
-    left: 190px;
-    width: 25%;
-    margin-top: 15px;
-    height: 27px;
-    border: 1px solid;
     background: navy;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #FFFFFF;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
+    margin-top: 15px;
 }
 .SendInn{
-    position: absolute;
-    left: 190px;
-    width: 25%;
     margin-top: 25px;
-    height: 27px;
-    border: 1px solid;
     background: green;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #FFFFFF;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-}
-.Resultater{
-
 }
 .Resultater input {
     width: 80px;
+    height: 20px;
+    position: relative;
+    font-size: 15px;
+}
+.Resultater label{
+    position: relative;
+    left: 60px;
+    width: 230px;
+    display: inline-block;
+}
+.Siste h1{
+    margin-left: 70px;
+    margin-top: 50px;
+    color: navy;
+}
+.sisteFilter{
+    margin-left: 70px;
 }
 .tabell{
     margin-left: 70px;
-    color: #2648ff;
+    margin-top: 10px;
+    color: black;
+    border-color: black;
+    background-color: #FFFFFF;
+    position: absolute;
+
 }

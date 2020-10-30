@@ -56,7 +56,7 @@
             </select>
         </div>
         <div>
-            <button class="søk" type="submit">Vis resultater</button>
+            <button class="søk" type="submit" >Vis resultater</button>
         </div>
     </form>
 </div>

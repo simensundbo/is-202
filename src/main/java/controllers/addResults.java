@@ -35,15 +35,8 @@ public class addResults extends HttpServlet {
         String sargeant=req.getParameter("Sargeant");
         String kroppshev=req.getParameter("Kroppshev");
 
-<<<<<<< HEAD
-=======
         int i = Integer.parseInt(år);
 
-
-
-
-
->>>>>>> 1bc1e630ca8a09abd76ec0e0a4ade0f26fa1ac8a
     }
 
 }
