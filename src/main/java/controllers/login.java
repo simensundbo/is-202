@@ -31,17 +31,19 @@ public class login extends HttpServlet {
         model.setPass(p);
 
         boolean status = model.loginUser();
+        HttpSession session = req.getSession();
 
         if (status) {
-            HttpSession session = req.getSession();
             session.setAttribute("user", model.getName());
             RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
             rd.forward(req, res);
 
         } else {
-            RequestDispatcher rs = req.getRequestDispatcher("loginError.jsp");
-            //req.setAttribute("");
-            rs.forward(req, res);
+            session.invalidate();
+            req.setAttribute("errorMessage", "Invalid user or password");
+            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            rd.forward(req, res);
+
         }
 
 

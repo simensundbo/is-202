@@ -180,6 +180,7 @@ public class ResultModel {
         this.kroppshev = kroppshev;
     }
 
+
     public boolean insert() throws SQLException {
     try {
         Connection con = ConnectionProvider.getCon();

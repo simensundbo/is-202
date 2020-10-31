@@ -31,6 +31,13 @@
         <input class="btn" type="submit" value="Login">
     </form>
 
+    <%
+        if(null!=request.getAttribute("errorMessage"))
+        {
+            out.println(request.getAttribute("errorMessage"));
+        }
+    %>
+
     <p>
         Ikke registrert enda?<br>
         <a href="register.jsp" class="btn">Registrer deg her!</a>

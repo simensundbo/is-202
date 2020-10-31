@@ -1,17 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Andreas Martinsen
-  Date: 27.10.2020
-  Time: 13.27
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="helpers.navbar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Nye resultater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/leggInnResultater.css">
 </head>
 <body>
+<%
+    out.println(navbar.nav);
+%>
 <div class="regform">
     <form action="addResults" method="post">
         <h1>Legg inn resultater</h1>
@@ -31,15 +29,10 @@
                 <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
             </div>
         </div>
-<<<<<<< Updated upstream
-        <h2>Velg test</h2>
-        <div class="Filtrer">
-            <select class="ÅrogUke" name="År">
-=======
+
         <div class="ÅrogUkeFilter">
             <h2>Velg test</h2>
             <select class="År" name="aar">
->>>>>>> Stashed changes
                 <option disabled="disabled" selected="selected">År</option>
                 <option value="2020"> 2020 </option>
                 <option value="2019"> 2019 </option>

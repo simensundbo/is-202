@@ -2,6 +2,7 @@ package controllers;
 
 import model.ResultModel;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "addResults", urlPatterns = "/addResults")
 public class addResults extends HttpServlet {
@@ -46,10 +48,6 @@ public class addResults extends HttpServlet {
         model.setUke(uke);
         model.setKlasse(klasse);
 
-<<<<<<< Updated upstream
-        int i = Integer.parseInt(år);
-
-=======
         model.setFemtusen_tid(femtusen_tid);
         model.setFemtusen_watt(femtusen_watt);
         model.setTretusen_tid(tretusen_tid);
@@ -72,12 +70,14 @@ public class addResults extends HttpServlet {
         }
 
         if(status) {
-
+            HttpSession session = req.getSession();
+            session.getAttribute("user");
             res.sendRedirect("welcome.jsp");
+
+        } else {
 
         }
 
->>>>>>> Stashed changes
     }
 
 }

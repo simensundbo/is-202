@@ -1,10 +1,16 @@
+<%@ page import="helpers.navbar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Søk etter resultater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/søkResultater.css">
 </head>
 <body>
+<%
+    out.println(navbar.nav);
+%>
+
 <div class="søkform">
     <form method="get">
         <h1>Søk etter resultater</h1>
