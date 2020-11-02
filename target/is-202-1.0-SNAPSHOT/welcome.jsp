@@ -26,7 +26,7 @@
             <h2>Siste resultater</h2>
             <p>
                 Se resultatene fra siste test. <br>
-                <a href="sisteResultater.jsp" class="btn">Siste resultater!</a>
+                <a href="latestResults.jsp" class="btn">Siste resultater!</a>
             </p>
         </div>
         <div class="box">
