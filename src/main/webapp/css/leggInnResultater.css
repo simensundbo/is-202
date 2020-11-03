@@ -6,7 +6,7 @@ body {
     height: 100vh;
 }
 .regform {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     height: 630px;
