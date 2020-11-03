@@ -12,29 +12,25 @@
 %>
 
 <div class="søkform">
-    <form method="get">
+    <form action="#" method="get">
         <h1>Søk etter resultater</h1>
         <h2>Filtrer ditt søk</h2>
         <div class="Filter">
             <select class="Klubb" name="Klubb">
                 <option disabled="disabled" selected="selected">Klubb</option>
                 <option> Alle </option>
-                <option> Arendals Roklubb </option>
-                <option> Bærum Roklubb </option>
-                <option> Kristiansand Roklubb </option>
-                <option> Oslo Roklubb </option>
-                <option> Porsgrunn Roklubb </option>
+                <option value="Arendals"> Arendals Roklubb </option>
+                <option value="Bærum"> Bærum Roklubb </option>
+                <option value="Kristiansand"> Kristiansand Roklubb </option>
+                <option value="Oslo"> Oslo Roklubb </option>
+                <option value="Porsgrunn"> Porsgrunn Roklubb </option>
             </select>
 
-            <select class="Utøver" name="Utøver">
-                <option disabled="disabled" selected="selected">Utøver</option>
-                <option> Alle </option>
-                <option> Anders Korsnes </option>
-                <option> Andreas Martinsen </option>
-                <option> Elias Gauslaa </option>
-                <option> Martin Løvberg </option>
-                <option> Simen Sundbø </option>
-            </select>
+            <div class="navn">
+                <input class="fornavn" type="text" placeholder="Fornavn" name="Fornavn">
+                <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
+            </div>
+
         </div>
         <div class="KlasseUkeÅr">
             <select class="Klasse" name="Klasse">

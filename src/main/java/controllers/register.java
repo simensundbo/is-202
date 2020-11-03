@@ -48,23 +48,6 @@ public class register extends HttpServlet {
             rd.forward(req, res);
         }
 
-        /*try {
-            Connection con = ConnectionProvider.getCon();
-            PreparedStatement li = con.prepareStatement(sql);
-
-            li.setString(1, u);
-            li.setString(2, p);
-
-            int r = li.executeUpdate();
-            if (r>0) {
-                res.sendRedirect("welcome.jsp");
-            }
-
-
-
-        } catch (SQLException f) {
-            f.printStackTrace();
-        }*/
 
         out.close();
 

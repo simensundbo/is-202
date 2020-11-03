@@ -1,9 +1,7 @@
 package controllers;
 
 import model.UserModel;
-import model.loginDB;
 
-import javax.jms.Session;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,23 +43,6 @@ public class login extends HttpServlet {
             rd.forward(req, res);
 
         }
-
-
-        /*
-        loginDB db = new loginDB();
-
-        if (db.validate(uname, pass)) {
-
-            RequestDispatcher rs = req.getRequestDispatcher("welcome.jsp");
-           rs.forward(req, res);
-            //res.sendRedirect("welcome.jsp");
-
-        } else {
-
-            res.sendRedirect("loginError.jsp");
-
-        }
-        */
 
         out.close();
     }
