@@ -3,6 +3,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ResultModel {
@@ -27,6 +28,8 @@ public class ResultModel {
     private int kroppshev;
 
     private final String addResultSQL= "insert into test202.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    private final String searchSQL= "select * from test202.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
+
 
     public String getKlubb() {
         return klubb;
@@ -217,7 +220,31 @@ public class ResultModel {
         return false;
     }
 
+    public boolean search(){
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps = con.prepareStatement(searchSQL);
 
+            ps.setString(1, getKlubb());
+            ps.setString(2, getFornavn());
+            ps.setString(3, getEtternavn());
+            ps.setString(4, getKlasse());
+            ps.setInt(5, getUke());
+            ps.setInt(6, getÅr());
 
+            ResultSet result = ps.executeQuery();
+
+             if(result.next()) {
+                 return true;
+             } else {
+                 return false;
+             }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return false;
+    }
 
 }
