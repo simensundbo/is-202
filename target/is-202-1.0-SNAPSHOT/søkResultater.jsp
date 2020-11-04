@@ -10,7 +10,7 @@
 <%
     out.println(navbar.nav);
 %>
-<form action="searchResults" method="get">
+<form action="searchResults.jsp" method="get">
     <div class="søkform">
         <h1>Søk etter resultater</h1>
         <h2>Filtrer ditt søk</h2>

@@ -232,13 +232,9 @@ public class ResultModel {
             ps.setInt(5, getUke());
             ps.setInt(6, getÅr());
 
+
             ResultSet result = ps.executeQuery();
 
-             if(result.next()) {
-                 return true;
-             } else {
-                 return false;
-             }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

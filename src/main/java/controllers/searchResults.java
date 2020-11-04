@@ -36,7 +36,7 @@ public class searchResults extends HttpServlet {
         model.setUke(uke);
         model.setÅr(år);
 
-
+        model.search();
 
 
 
