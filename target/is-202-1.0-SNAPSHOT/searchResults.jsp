@@ -42,13 +42,11 @@
             try {
             Connection con = ConnectionProvider.getCon();
 
-            PreparedStatement ps = con.prepareStatement("select * from test202.results where klubb=? AND Fornavn=? AND Etternavn=? AND Klasse=? AND Uke=? AND År=?");
+            PreparedStatement ps = con.prepareStatement("select * from test202.results where klubb=? AND Fornavn=? AND Etternavn=? AND Klasse=?");
             ps.setString(1, request.getParameter("Klubb"));
             ps.setString(2, request.getParameter("Fornavn"));
             ps.setString(3, request.getParameter("Etternavn"));
             ps.setString(4, request.getParameter("Klasse"));
-            ps.setInt(5, Integer.parseInt(request.getParameter("Uke")));
-            ps.setInt(6, Integer.parseInt(request.getParameter("aar")));
 
             ResultSet result = ps.executeQuery();
 
@@ -78,7 +76,6 @@
         </tr>
 
             <%}%>
-
 
             <%} catch(Exception e) {
             System.out.print(e.getStackTrace());

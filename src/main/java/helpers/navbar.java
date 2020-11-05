@@ -3,7 +3,7 @@ package helpers;
 public class navbar {
     public static String nav = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n" +
             "        <nav class=\"navbar navbar-light bg-light\">\n" +
-            "            <a class=\"navbar-brand\" href=\"#\">\n" +
+            "            <a class=\"navbar-brand\" href=\"welcome.jsp\">\n" +
             "                <img src=\"images/norges%20roforbund.png\" width=\"\" height=\"50\">\n" +
             "            </a>\n" +
             "        </nav>\n" +
@@ -21,7 +21,7 @@ public class navbar {
             "                    </a>\n" +
             "                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n" +
             "                        <a class=\"dropdown-item\" href=\"#\">Utøvere</a>\n" +
-            "                            <a class=\"dropdown-item\" href=\"leggInnResultater.jsp\">Lett til resultater</a>\n" +
+            "                        <a class=\"dropdown-item\" href=\"leggInnResultater.jsp\">Lett til resultater</a>\n" +
             "                        <a class=\"dropdown-item\" href=\"https://www.roing.no/\">Norges Roforbund</a>\n" +
             "                        <div class=\"dropdown-divider\"></div>\n" +
             "                        <a class=\"dropdown-item\" href=\"index.jsp\">Logg ut</a>\n" +
