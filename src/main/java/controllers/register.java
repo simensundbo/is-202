@@ -44,7 +44,7 @@ public class register extends HttpServlet {
             RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
             rd.forward(req, res);
         } else {
-            RequestDispatcher rd=req.getRequestDispatcher("loginError.jsp");
+            RequestDispatcher rd=req.getRequestDispatcher("Error.jsp");
             rd.forward(req, res);
         }
 

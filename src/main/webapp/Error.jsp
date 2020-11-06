@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="css/styles.css" >
 </head>
 <body>
-    <div>
-        <h1 class="#">Feil brukernavn eller passord. Prøv på nytt!</h1>
-        <a href="index.jsp" class="btn">Prøv igjen!</a>
+    <div class="login-box">
+        <h1>En feil skjedde, våre utviklere jobber med saken!</h1>
+        <a href="leggInnResultater.jsp" class="btn">Prøv igjen!</a>
     </div>
 </body>
 </html>

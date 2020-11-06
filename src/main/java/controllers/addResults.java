@@ -74,7 +74,7 @@ public class addResults extends HttpServlet {
             res.sendRedirect("welcome.jsp");
 
         } else {
-
+            res.sendRedirect("index.jsp");
         }
 
     }
