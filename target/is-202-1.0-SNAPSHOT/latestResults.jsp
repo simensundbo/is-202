@@ -76,13 +76,17 @@
         <td><%=result.getString("bevegelighet") %></td>
         <td><%=result.getString("sargeant_cm") %></td>
         <td><%=result.getString("kroppshev") %></td>
+
     </tr>
     <%}%>
     </tbody>
 </table><br>
 <%} catch(Exception e) {
     out.print(e.getStackTrace());
-    }%><br>
+    } finally {
+         %>
+    }
+<br>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

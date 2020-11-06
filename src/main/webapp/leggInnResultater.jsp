@@ -25,8 +25,8 @@
             </select>
             <br>
             <div class="navn">
-                <input class="fornavn" type="text" placeholder="Fornavn" name="Fornavn">
-                <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
+                <input type="text" placeholder="Fornavn" name="Fornavn">
+                <input type="text" placeholder="Etternavn" name="Etternavn">
             </div>
         </div>
 

@@ -53,8 +53,11 @@ public class UserModel {
 
         } catch (SQLException f) {
             f.printStackTrace();
+        } finally {
+
         }
         return false;
+
     }
 
     public boolean loginUser() {
@@ -74,6 +77,7 @@ public class UserModel {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
         return false;
     }
