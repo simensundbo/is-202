@@ -60,24 +60,45 @@ body {
 }
 .Knapper button{
     position: absolute;
-    left: 190px;
-    width: 25%;
-    height: 27px;
     border: 1px solid;
     border-radius: 10px;
-    font-size: 14px;
     color: #FFFFFF;
     font-weight: 600;
     cursor: pointer;
     outline: none;
 }
-.LeggInnFlere{
-    background: navy;
-    margin-top: 15px;
-}
 .SendInn{
     margin-top: 25px;
     background: green;
+    height: 27px;
+    font-size: 14px;
+    left: 190px;
+    width: 25%;
+}
+.LeggInn {
+    position: relative;
+    background: navy;
+    height: 50px;
+    width: 300px;
+    font-size: 22px;
+    border-color: navy;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.LoggUt {
+    position: relative;
+    background: indianred;
+    border-color: lightgrey;
+    width: 150px;
+    font-size: 18px;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+}
+.LeggInnFlere{
+    background: navy;
+    margin-top: 15px;
 }
 .Resultater input {
     width: 80px;

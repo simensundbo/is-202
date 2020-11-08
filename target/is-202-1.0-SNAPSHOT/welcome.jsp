@@ -42,7 +42,6 @@
                 Se de beste resultatene fra hver klasse. <br>
                 <a href="#" class="btn">Resultater!</a>
             </p>
-        </div>
     </div>
 
 
