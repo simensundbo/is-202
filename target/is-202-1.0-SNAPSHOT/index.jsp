@@ -1,50 +1,91 @@
+<%@ page import="helpers.navbar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-
-    <title>Norges Roforbund</title>
+    <title>Velkommen</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navbar.css" >
     <link rel="stylesheet" href="css/styles.css" >
-    <link rel="shortcut icon" href="images/norges%20roforbund.png">
+
+
 
 </head>
-
 <body>
-<img id="vannbilde" src="images/vann.jpg">
-<div class="login-box">
-    <h1>Login</h1>
-    <form action="login" method="post">
-        <div class="textbox">
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-            </svg>
-            <input type="text" placeholder="Brukernavn" name="uname">
-        </div>
+<header>
+    <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
+    <nav class="navbar">
+        <ul class="nav_links">
+            <li><a href="#">Klubber</a></li>
+            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="roing.no">Norges Roforbund</a></li>
+            <li><a href="#">Kontakt oss</a></li>
+        </ul>
 
-        <div class="textbox">
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-key" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"></path>
-                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-            </svg>
-            <input type="password" placeholder="Passord" name="pass">
-        </div>
-
-        <input class="btn" type="submit" value="Login">
-    </form>
-
-    <%
-        if(null!=request.getAttribute("errorMessage"))
-        {
-            out.println(request.getAttribute("errorMessage"));
-        }
+    </nav>
+    <% if(session.getAttribute("user")==null) {
+        out.print("<a href=\"login.jsp\"><button>Logg inn</button></a>");
+    } else {
+        out.print("<a href=\"logout\"><button>Logg ut</button></a>");
+    }
     %>
+</header>
 
-    <p>
-        Ikke registrert enda?<br>
-        <a href="register.jsp" class="btn">Registrer deg her!</a>
-    </p>
-</div>
+    <h1>
+        Velkommen ${user}<br>
+    </h1>
 
+    <div class="row">
+        <div class="box">
+            <h2>Siste resultater</h2>
+            <p>
+                Se resultatene fra siste test. <br>
+                <a href="latestResults.jsp" class="btn">Siste resultater!</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Søk etter resultater</h2>
+            <p>
+                <a href="søkResultater.jsp" class="btn">Resultater!</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Top resultater</h2>
+            <p>
+                Se de beste resultatene fra hver klasse. <br>
+                <a href="#" class="btn">Resultater!</a>
+            </p>
+        </div>
+    </div>
+<%
+
+    if(session.getAttribute("user")!=null) {
+    out.print("<div class=\"row\" >\n" +
+            "        <div class=\"box\" >\n" +
+            "            <h2> Legg inn resultater</h2>\n" +
+            "            <p>\n" +
+            "            Legg til nye resultater ! <br>\n" +
+            "                <a href = \"leggInnResultater.jsp\" class=\"btn\" > Legg inn resultater.</a>\n" +
+            "            </p>\n" +
+            "        </div>\n" +
+            "        <div class=\"box\">\n" +
+            "            <h2> Endre eller slette resultater</h2>\n" +
+            "            <p>\n" +
+            "            Her kan man endre eller slette gamle eller ny resultater.<br>\n" +
+            "            <a href = \"#\" class=\"btn\" > Endre eller slett ! </a>\n" +
+            "            </p>\n" +
+            "        </div>\n" +
+            "        <div class=\"box\">\n" +
+            "            <h2> Legg til eller endre utøver informasjon</h2>\n" +
+            "            <p>\n" +
+            "            Her kan man endre informasjonen om en utøver eller legge til nye.<br>\n" +
+            "            <a href=\"#\" class=\"btn\"> Endre/legg til eller slett</a>\n" +
+            "            </p>\n" +
+            "        </div>\n" +
+            "    </div>");
+    } %>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>

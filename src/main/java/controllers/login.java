@@ -33,13 +33,13 @@ public class login extends HttpServlet {
 
         if (status) {
             session.setAttribute("user", model.getName());
-            RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
+            RequestDispatcher rd=req.getRequestDispatcher("index.jsp");
             rd.forward(req, res);
 
         } else {
             session.invalidate();
-            req.setAttribute("errorMessage", "Invalid user or password");
-            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            req.setAttribute("errorMessage", "Feil passord eller brukernavn, prøv på nytt!");
+            RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
             rd.forward(req, res);
 
         }

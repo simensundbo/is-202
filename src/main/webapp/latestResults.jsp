@@ -18,6 +18,7 @@
     <title>Siste resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css" >
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <script type="text/javascript" language="JavaScript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" language="JavaScript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
@@ -30,8 +31,25 @@
 
 </head>
 <body>
+<header>
+    <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
+    <nav class="navbar">
+        <ul class="nav_links">
+            <li><a href="#">Klubber</a></li>
+            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="roing.no">Norges Roforbund</a></li>
+            <li><a href="#">Kontakt oss</a></li>
+        </ul>
+
+    </nav>
+    <% if(session.getAttribute("user")==null) {
+        out.print("<a href=\"login.jsp\"><button>Logg inn</button></a>");
+    } else {
+        out.print("<a href=\"logout\"><button>Logg ut</button></a>");
+    }
+    %>
+</header>
 <%
-    out.println(navbar.nav);
     try
     {
         Connection con = ConnectionProvider.getCon();
