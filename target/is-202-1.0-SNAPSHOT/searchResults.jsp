@@ -11,10 +11,28 @@
     <title>Resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/leggInnResultater.css">
-</head>
+    <link rel="stylesheet" href="css/navbar.css" >
 
-<% out.print(navbar.nav);%>
-    <body>
+</head>
+<body>
+<header>
+    <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
+    <nav class="navbar">
+        <ul class="nav_links">
+            <li><a href="#">Klubber</a></li>
+            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="roing.no">Norges Roforbund</a></li>
+            <li><a href="#">Kontakt oss</a></li>
+        </ul>
+
+    </nav>
+    <% if(session.getAttribute("user")==null) {
+        out.print("<a href=\"login.jsp\"><button>Logg inn</button></a>");
+    } else {
+        out.print("<a href=\"logout\"><button>Logg ut</button></a>");
+    }
+    %>
+</header>
     <h1>Resultater</h1> <br>
     <table class="tabell" border="2">
         <tr>

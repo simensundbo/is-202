@@ -41,7 +41,7 @@ public class register extends HttpServlet {
         if(status) {
             HttpSession session = req.getSession();
             session.setAttribute("user", model.getName());
-            RequestDispatcher rd=req.getRequestDispatcher("welcome.jsp");
+            RequestDispatcher rd=req.getRequestDispatcher("index.jsp");
             rd.forward(req, res);
         } else {
             RequestDispatcher rd=req.getRequestDispatcher("Error.jsp");

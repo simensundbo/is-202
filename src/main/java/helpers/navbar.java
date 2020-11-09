@@ -51,21 +51,20 @@ public class navbar {
             "\n" +
             "    button {\n" +
             "        padding: 9px 25px;\n" +
-            "        background-color: #2648ff;\n" +
+            "        background-color: rgba(0, 136, 169, 1);\n" +
             "        border: none;\n" +
-            "        color: white;\n" +
             "        border-radius: 50px;\n" +
             "        cursor: pointer;\n" +
             "        transition: all 0.3s ease 0s;\n" +
             "    }\n" +
             "\n" +
             "    button:hover {\n" +
-            "        background-color: #4095c6;\n" +
+            "        background-color: rgba(0, 136,169, 0.8);\n" +
             "    }\n" +
             "\n" +
             "</style>\n" +
             "<header>\n" +
-            "    <a class=\"logo\" href=\"welcome.jsp\"><img class=\"logo\" src=\"images/norges%20roforbund.png\"></a>\n" +
+            "    <a class=\"logo\" href=\"#\"><img class=\"logo\" src=\"images/norges%20roforbund.png\"></a>\n" +
             "    <nav class=\"navbar\">\n" +
             "        <ul class=\"nav_links\">\n" +
             "            <li><a href=\"#\">Klubber</a></li>\n" +
@@ -75,8 +74,13 @@ public class navbar {
             "        </ul>\n" +
             "\n" +
             "    </nav>\n" +
-            "    <a href=\"index.jsp\"><button>Logg inn</button></a>\n" +
-            "</header>";
+            "    <%if(session.getAttribute(\"user\")==null){\n" +
+            "        out.print(\"<a href=\"login.jsp\"><button>Logg inn</button></a>\");\n" +
+            "    }else {\n" +
+            "        out.print(\"<a href=\"logout\"><button>Logg ut</button></a>\");\n" +
+            "    }\n" +
+            "    %>\n" +
+            "</header>\n";
 
     }
 

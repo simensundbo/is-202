@@ -71,10 +71,10 @@ public class addResults extends HttpServlet {
         if(status) {
             HttpSession session = req.getSession();
             session.getAttribute("user");
-            res.sendRedirect("welcome.jsp");
+            res.sendRedirect("index.jsp");
 
         } else {
-            res.sendRedirect("index.jsp");
+            res.sendRedirect("login.jsp");
         }
 
     }
