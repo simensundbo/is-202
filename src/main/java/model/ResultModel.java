@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ResultModel {
+    private int resultatID;
     private String klubb;
     private String fornavn;
     private String etternavn;
@@ -29,7 +30,15 @@ public class ResultModel {
 
     private final String addResultSQL= "insert into test202.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private final String searchSQL= "select * from test202.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
+    private final String deleteSQL= "delete from test202.results where ResultatID=?;";
 
+    public int getResultatID() {
+        return resultatID;
+    }
+
+    public void setResultatID(int resultatID) {
+        this.resultatID = resultatID;
+    }
 
     public String getKlubb() {
         return klubb;
@@ -241,6 +250,29 @@ public class ResultModel {
         }
 
         return false;
+    }
+
+    public boolean delete(){
+
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps = con.prepareStatement(deleteSQL);
+
+            ps.setInt(1, getResultatID());
+
+            int i= ps.executeUpdate();
+            if (i!=0) {
+                return true;
+            }
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+        }
+
+        return false;
+
     }
 
 }

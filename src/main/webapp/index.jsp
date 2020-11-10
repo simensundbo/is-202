@@ -71,7 +71,7 @@
             "            <h2> Endre eller slette resultater</h2>\n" +
             "            <p>\n" +
             "            Her kan man endre eller slette gamle eller ny resultater.<br>\n" +
-            "            <a href = \"#\" class=\"btn\" > Endre eller slett ! </a>\n" +
+            "            <a href = \"editOrDeleteResults.jsp\" class=\"btn\" > Endre eller slett ! </a>\n" +
             "            </p>\n" +
             "        </div>\n" +
             "        <div class=\"box\">\n" +
