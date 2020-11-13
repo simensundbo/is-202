@@ -12,6 +12,7 @@ public class ResultModel {
     private String fornavn;
     private String etternavn;
     private int år;
+    private double score;
     private int uke;
     private String klasse;
     private double femtusen_tid;
@@ -31,6 +32,9 @@ public class ResultModel {
     private final String addResultSQL= "insert into test202.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private final String searchSQL= "select * from test202.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
     private final String deleteSQL= "delete from test202.results where ResultatID=?;";
+    private final String updateSQL= "update test202.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
+    private final String resultByIdSQL= "select * from test202.results where ResultatID=?;";
+
 
     public int getResultatID() {
         return resultatID;
@@ -78,6 +82,14 @@ public class ResultModel {
 
     public void setUke(int uke) {
         this.uke = uke;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
     }
 
     public String getKlasse() {
@@ -273,6 +285,83 @@ public class ResultModel {
 
         return false;
 
+    }
+
+    public boolean update() {
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps = con.prepareStatement(updateSQL);
+
+            ps.setInt(1, getÅr());
+            ps.setInt(2, getUke());
+            ps.setDouble(3, getScore());
+            ps.setString(4, getFornavn());
+            ps.setString(5, getEtternavn());
+            ps.setString(6, getKlasse());
+            ps.setString(7, getKlubb());
+            ps.setInt(8, getFemtusen_watt());
+            ps.setDouble(9, getFemtusen_tid());
+            ps.setDouble(10, getTretusen_tid());
+            ps.setDouble(11, getTotusen_tid());
+            ps.setInt(12, getTotusen_watt());
+            ps.setDouble(13, getSekstiwatt());
+            ps.setDouble(14, getLiggroKilo());
+            ps.setDouble(15, getLiggroProsent());
+            ps.setInt(16, getKnebøykilo());
+            ps.setDouble(17, getKnebøyprosent());
+            ps.setInt(18, getBevegelighet());
+            ps.setInt(19, getSargeant());
+            ps.setInt(20, getKroppshev());
+            ps.setInt(21, getResultatID());
+
+            int i= ps.executeUpdate();
+            if (i!=0) {
+                return true;
+            }
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public boolean resultById(){
+        try{
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps=con.prepareStatement(resultByIdSQL);
+
+            ps.setInt(1, getResultatID());
+            ResultSet rs=ps.executeQuery();
+
+            while(rs.next()){
+                setResultatID(rs.getInt(1));
+                setÅr(rs.getInt(2));
+                setUke(rs.getInt(3));
+                setScore(rs.getDouble(4));
+                setFornavn(rs.getString(5));
+                setEtternavn(rs.getString(6));
+                setKlasse(rs.getString(7));
+                setKlubb(rs.getString(8));
+                setFemtusen_watt(rs.getInt(9));
+                setFemtusen_tid(rs.getDouble(10));
+                setTretusen_tid(rs.getDouble(11));
+                setTotusen_tid(rs.getDouble(12));
+                setTotusen_watt(rs.getInt(13));
+                setSekstiwatt(rs.getInt(14));
+                setLiggroKilo(rs.getInt(15));
+                setLiggroProsent(rs.getDouble(16));
+                setKnebøykilo(rs.getInt(17));
+                setKnebøyprosent(rs.getInt(18));
+                setBevegelighet(rs.getInt(19));
+                setSargeant(rs.getInt(20));
+                setKroppshev(rs.getInt(21));
+            }
+        }catch(Exception e)
+        {System.out.println(e);}
+
+        return false;
     }
 
 }

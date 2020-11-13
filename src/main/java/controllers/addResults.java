@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 public class addResults extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
 
         String klubb=req.getParameter("Klubb");
         String fornavn=req.getParameter("Fornavn");

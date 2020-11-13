@@ -17,13 +17,14 @@ public class register extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
-
         /*if(req.getAttribute("method") == "insert") {
             insert(req, res);
         } else if(req.getAttribute("method") == "login") {
             login();
             }
         */
+
+        req.setCharacterEncoding("UTF-8");
 
         res.setContentType("test/html");
         PrintWriter out = res.getWriter();

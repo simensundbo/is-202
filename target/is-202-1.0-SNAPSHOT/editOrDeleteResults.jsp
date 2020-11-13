@@ -11,8 +11,10 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="model.ResultModel" %>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Alle resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
@@ -80,6 +82,8 @@
         <th>Bevegelighet</th>
         <th>Sargent</th>
         <th>Kroppshev</th>
+        <th>Slett</th>
+        <th>Endre</th>
     </tr>
     </thead>
     <tbody>
@@ -108,6 +112,16 @@
         <td><%=result.getString("bevegelighet") %></td>
         <td><%=result.getString("sargeant_cm") %></td>
         <td><%=result.getString("kroppshev") %></td>
+        <td>
+            <form action="editOrDelete" method="post">
+                <button value="<%=result.getString("ResultatID") %>" type="submit" name="resultatID">Slett</button>
+            </form>
+        </td>
+        <td>
+            <form action="edit.jsp" method="post">
+                <button type="submit" name="resultatID" value="<%=result.getString("ResultatID") %>">Endre</button>
+            </form>
+        </td>
     </tr>
     <%}%>
     </tbody>
@@ -120,15 +134,6 @@
 }
 %>
 
-    <div class="box">
-        <h3>Endre eller slett ett resultat</h3>
-        <p>For å slette ett resultat bruker man Resultat ID en.</p>
-        <form action="editOrDelete" method="post">
-            <input type="text" placeholder="Resultat ID" name="resultatID" class="textbox">
-            <input type="submit" value="Slett resultatet." class="btn">
-        </form>
-
-
         <%
             if(request.getAttribute("deleteSucceeds")!=null) {
                 out.println(request.getAttribute("deleteSucceeds"));
@@ -137,7 +142,7 @@
                 out.println(request.getAttribute("deleteError"));
             }
         %>
-    </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

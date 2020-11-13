@@ -37,9 +37,11 @@ public class editOrDelete extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("editOrDeleteResults.jsp");
             rd.forward(req, res);
         }
+
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
     }
 }
