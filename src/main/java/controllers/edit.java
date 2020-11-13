@@ -2,7 +2,7 @@ package controllers;
 
 import model.ResultModel;
 
-import javax.servlet.RequestDispatcher;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +16,10 @@ public class edit extends HttpServlet {
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
 
+        int resultatID = Integer.parseInt(req.getParameter("resultatID"));
         int år = Integer.parseInt(req.getParameter("år"));
         int uke = Integer.parseInt(req.getParameter("uke"));
-        int score = Integer.parseInt(req.getParameter("score"));
+        double score = Double.parseDouble(req.getParameter("score"));
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
         String klasse = req.getParameter("klasse");
@@ -38,13 +39,37 @@ public class edit extends HttpServlet {
         int sargeant=Integer.parseInt(req.getParameter("sargeant"));
         int kroppshev=Integer.parseInt(req.getParameter("kroppshev"));
 
-        
-        System.out.println(fornavn);
-        System.out.println(etternavn);
-        System.out.println(knebøykilo);
-        System.out.println(knebøyprosent);
+        ResultModel model = new ResultModel();
 
+        model.setResultatID(resultatID);
+        model.setÅr(år);
+        model.setUke(uke);
+        model.setScore(score);
+        model.setFornavn(fornavn);
+        model.setEtternavn(etternavn);
+        model.setKlasse(klasse);
+        model.setKlubb(klubb);
+        model.setFemtusen_tid(femtusen_tid);
+        model.setFemtusen_watt(femtusen_watt);
+        model.setTretusen_tid(tretusen_tid);
+        model.setTotusen_tid(totusen_tid);
+        model.setTotusen_watt(totusen_watt);
+        model.setSekstiwatt(sekstiwatt);
+        model.setLiggroKilo(liggrokilo);
+        model.setLiggroProsent(liggroprosent);
+        model.setKnebøykilo(knebøykilo);
+        model.setKnebøyprosent(knebøyprosent);
+        model.setBevegelighet(bevegelighet);
+        model.setSargeant(sargeant);
+        model.setKroppshev(kroppshev);
 
+        boolean status = model.update();
+
+        if(status){
+            res.sendRedirect("editOrDeleteResults.jsp");
+        } else {
+            res.sendRedirect("Error.jsp");
+        }
 
     }
 

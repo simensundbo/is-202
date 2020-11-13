@@ -18,7 +18,6 @@ public class editOrDelete extends HttpServlet {
 
         int resultatID = Integer.parseInt(req.getParameter("resultatID"));
 
-
         ResultModel model = new ResultModel();
 
         model.setResultatID(resultatID);
