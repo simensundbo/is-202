@@ -10,8 +10,8 @@
 <head>
     <meta charset="utf-8">
     <title>Endre</title>
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/leggInnResultater.css">
-    <link rel="stylesheet" href="css/navbar.css" >
 </head>
 <body>
 <header>
