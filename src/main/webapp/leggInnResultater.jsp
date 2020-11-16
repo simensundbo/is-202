@@ -56,15 +56,15 @@
                 <option value="2019"> 2019 </option>
             </select>
 
-            <select class="ÅrogUke" name="Uke">
+            <select class="Uke" name="Uke">
                 <option disabled="disabled" selected="selected">Uke</option>
                 <option value="2"> Uke 2 </option>
                 <option value="11"> Uke 11 </option>
                 <option value="44"> Uke 44 </option>
             </select>
         </div>
-        <h2>Velg klasse</h2>
         <div class="Filtrer">
+            <h2>Velg klasse</h2>
             <select class="Klasse" name="Klasse" id="Klasse">
                 <option disabled="disabled" selected="selected">Klasse</option>
                 <option value="Senior menn"> Senior menn </option>

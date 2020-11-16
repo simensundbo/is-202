@@ -45,41 +45,73 @@
     <form action="edit" method="post">
         <h1>Endre testresultatet</h1>
         <div class="Filtrer">
+            <h2>Rediger utøver</h2>
             <input hidden type="text" value="<%=model.getResultatID()%>" name="resultatID">
-            <div class="ÅrogUke">
-            <input type="text" value="<%=model.getÅr()%>" name="år">
-            <input type="text" value="<%=model.getUke()%>" name="uke">
-            </div>
-                <label>Score</label>
-                <input type="text" value="<%=model.getScore()%>" name="score">
+            <input type="text" placeholder="Klubb" value="<%=model.getKlubb()%>" name="klubb">
+            <br>
             <div class="navn">
-                <input type="text" value="<%=model.getFornavn()%>" name="fornavn">
-                <input type="text" value="<%=model.getEtternavn()%>" name="etternavn">
+                <input type="text" placeholder="Fornavn" value="<%=model.getFornavn()%>" name="fornavn">
+                <input type="text" placeholder="Etternavn" value="<%=model.getEtternavn()%>" name="etternavn">
             </div>
-            <div>
-                <input type="text" value="<%=model.getKlasse()%>" name="klasse">
-                <input type="text" value="<%=model.getKlubb()%>" name="klubb">
+            <div class="ÅrogUkeFilter">
+                <h2>Rediger test</h2>
+                <input type="text" placeholder="År" value="<%=model.getÅr()%>" name="år">
+
+                <input type="text" placeholder="Uke" value="<%=model.getUke()%>" name="uke">
             </div>
         </div>
-
-        <div>
-            <input type="text" value="<%=model.getFemtusen_watt()%>" name="fremtusen_watt">
-            <input type="text" value="<%=model.getFemtusen_tid()%>" name="femtusen_tid">
-            <input type="text" value="<%=model.getTretusen_tid()%>" name="tretusen_tid">
-            <input type="text" value="<%=model.getTotusen_tid()%>" name="totusen_tid">
-            <input type="text" value="<%=model.getTotusen_watt()%>" name="totusen_watt">
-            <input type="text" value="<%=model.getSekstiwatt()%>" name="seksti_watt">
-            <input type="text" value="<%=model.getLiggroKilo()%>" name="liggero_kilo">
-            <input type="text" value="<%=model.getLiggroProsent()%>" name="liggero_prosent">
-            <input type="text" value="<%=model.getKnebøykilo()%>" name="kneboy_kilo">
-            <input type="text" value="<%=model.getKnebøyprosent()%>" name="kneboy_prosent">
-            <input type="text" value="<%=model.getBevegelighet()%>" name="bevegelighet">
-            <input type="text" value="<%=model.getSargeant()%>" name="sargeant">
-            <input type="text" value="<%=model.getKroppshev()%>" name="kroppshev">
+        <div class="Filtrer">
+            <h2>Rediger klasse</h2>
+            <input type="text" value="<%=model.getKlasse()%>" name="klasse">
         </div>
-
-        <input class="SendInn" type="submit" value="Endre!">
-
+        <br>
+        <div class="Resultater">
+            <label>Score</label>
+            <input type="text" placeholder="Sum" value="<%=model.getScore()%>" name="score">
+        </div>
+        <div class="Resultater">
+            <label>5000 meter</label>
+            <input type="text" placeholder="Tid" value="<%=model.getFemtusen_tid()%>" name="femtusen_tid">
+            <input type="text" placeholder="Watt" value="<%=model.getFemtusen_watt()%>" name="femtusen_watt">
+        </div>
+        <div class="Resultater">
+            <label>3000 meter</label>
+            <input type="text" placeholder="Tid" value="<%=model.getTretusen_tid()%>" name="tretusen_tid">
+        </div>
+        <div class="Resultater">
+            <label>2000 meter</label>
+            <input type="text" placeholder="Tid" value="<%=model.getTotusen_tid()%>" name="totusen_tid">
+            <input type="text" placeholder="Watt" value="<%=model.getTotusen_watt()%>" name="totusen_watt">
+        </div>
+        <div class="Resultater">
+            <label>60"</label>
+            <input type="text" placeholder="Watt" value="<%=model.getSekstiwatt()%>" name="seksti_watt">
+        </div>
+        <div class="Resultater">
+            <label>Liggende rotak</label>
+            <input type="text" placeholder="Kilo" value="<%=model.getLiggroKilo()%>" name="liggero_kilo">
+            <input type="text" placeholder="Prosent" value="<%=model.getLiggroProsent()%>" name="liggero_prosent">
+        </div>
+        <div class="Resultater">
+            <label>Knebøy</label>
+            <input type="text" placeholder="Kilo" value="<%=model.getKnebøykilo()%>" name="kneboy_kilo">
+            <input type="text" placeholder="Prosent" value="<%=model.getKnebøyprosent()%>" name="kneboy_prosent">
+        </div>
+        <div class="Resultater">
+            <label>Bevegelighet</label>
+            <input type="text" placeholder="Antall" value="<%=model.getBevegelighet()%>" name="bevegelighet">
+        </div>
+        <div class="Resultater">
+            <label>Sargeant</label>
+            <input type="text" placeholder="Cm" value="<%=model.getSargeant()%>" name="sargeant">
+        </div>
+        <div class="Resultater">
+            <label>Kroppshev</label>
+            <input type="text" placeholder="Antall" value="<%=model.getKroppshev()%>" name="kroppshev">
+        </div>
+        <div class="Knapper">
+            <button class="SendInn" type="submit" name="Endre!">Endre!</button>
+        </div>
     </form>
 </div>
 </body>
