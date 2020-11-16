@@ -10,7 +10,6 @@
 </head>
 
 <body>
-<img id="vannbilde" src="images/vann.jpg">
 <div class="login-box">
     <h1>Login</h1>
     <form action="login" method="post">
