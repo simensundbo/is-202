@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "edit", urlPatterns = "/edit")
-public class edit extends HttpServlet {
+@WebServlet(name = "editResults", urlPatterns = "/editResults")
+public class editResults extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");

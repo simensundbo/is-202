@@ -53,7 +53,7 @@
     try
     {
         Connection con = ConnectionProvider.getCon();
-        PreparedStatement ps = con.prepareStatement("select * from test202.results;");
+        PreparedStatement ps = con.prepareStatement("select * from 202db.results;");
         ResultSet result = ps.executeQuery();
 %>
 
@@ -61,7 +61,7 @@
 <table class="table table-hover" id="allResults" border="2">
     <thead>
     <tr>
-        <th>Resultat ID</th>
+        <th hidden>Resultat ID</th>
         <th>År</th>
         <th>Uke</th>
         <th>Score</th>
@@ -91,7 +91,7 @@
     {
     %>
     <tr>
-        <td><%=result.getString("ResultatID") %></td>
+        <td hidden><%=result.getString("ResultatID") %></td>
         <td><%=result.getString("år") %></td>
         <td><%=result.getString("uke") %></td>
         <td><%=result.getString("score") %></td>
@@ -113,7 +113,7 @@
         <td><%=result.getString("sargeant_cm") %></td>
         <td><%=result.getString("kroppshev") %></td>
         <td>
-            <form action="editOrDelete" method="post">
+            <form action="deleteResults" method="post">
                 <button value="<%=result.getString("ResultatID") %>" type="submit" name="resultatID">Slett</button>
             </form>
         </td>

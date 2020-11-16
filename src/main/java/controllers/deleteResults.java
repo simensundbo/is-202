@@ -11,10 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "editOrDelete", urlPatterns = "/editOrDelete")
-public class editOrDelete extends HttpServlet {
+@WebServlet(name = "deleteResults", urlPatterns = "/deleteResults")
+public class deleteResults extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
+
 
         int resultatID = Integer.parseInt(req.getParameter("resultatID"));
 

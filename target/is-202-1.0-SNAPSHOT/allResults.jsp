@@ -51,7 +51,7 @@
     try
     {
         Connection con = ConnectionProvider.getCon();
-        PreparedStatement ps = con.prepareStatement("select * from test202.results;");
+        PreparedStatement ps = con.prepareStatement("select * from 202db.results;");
         ResultSet result = ps.executeQuery();
 %>
 

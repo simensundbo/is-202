@@ -42,7 +42,7 @@
 %>
 
 <div class="regform">
-    <form action="edit" method="post">
+    <form action="editResults" method="post">
         <h1>Endre testresultatet</h1>
         <div class="Filtrer">
             <input hidden type="text" value="<%=model.getResultatID()%>" name="resultatID">

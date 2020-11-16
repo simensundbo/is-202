@@ -29,11 +29,11 @@ public class ResultModel {
     private int sargeant;
     private int kroppshev;
 
-    private final String addResultSQL= "insert into test202.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-    private final String searchSQL= "select * from test202.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
-    private final String deleteSQL= "delete from test202.results where ResultatID=?;";
-    private final String updateSQL= "update test202.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
-    private final String resultByIdSQL= "select * from test202.results where ResultatID=?;";
+    private final String addResultSQL= "insert into 202db.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    private final String searchSQL= "select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
+    private final String deleteSQL= "delete from 202db.results where ResultatID=?;";
+    private final String updateSQL= "update 202db.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
+    private final String resultByIdSQL= "select * from 202db.results where ResultatID=?;";
 
 
     public int getResultatID() {
@@ -242,7 +242,7 @@ public class ResultModel {
     }
 
     public boolean search(){
-        try {
+        try { //blir ikke brukt
             Connection con = ConnectionProvider.getCon();
             PreparedStatement ps = con.prepareStatement(searchSQL);
 

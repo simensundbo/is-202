@@ -10,7 +10,7 @@
 <head>
     <title>Resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/leggInnResultater.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css" >
 
 </head>
@@ -33,8 +33,9 @@
     }
     %>
 </header>
+
     <h1>Resultater</h1> <br>
-    <table class="tabell" border="2">
+    <table class="table table-hover" border="2">
         <tr>
             <th>År</th>
             <th>Uke</th>
@@ -60,7 +61,7 @@
             try {
             Connection con = ConnectionProvider.getCon();
 
-            PreparedStatement ps = con.prepareStatement("select * from test202.results where klubb=? AND Fornavn=? AND Etternavn=? AND Klasse=?");
+            PreparedStatement ps = con.prepareStatement("select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=?");
             ps.setString(1, request.getParameter("Klubb"));
             ps.setString(2, request.getParameter("Fornavn"));
             ps.setString(3, request.getParameter("Etternavn"));
