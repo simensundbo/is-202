@@ -51,7 +51,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Siste testresultater</h2>
-            <p>Alle testresultatene fra uke 44 er når tiljegelig! Sjekk de ut. :) </p><br><br>
+            <p>Alle testresultatene fra uke 44 er når tilgjengelig! Sjekk de ut. :) </p><br><br>
             <p><a class="btn btn-primary" href="latestResults.jsp" role="button">Siste testresultater</a></p>
         </div>
         <div class="col-md-4">
