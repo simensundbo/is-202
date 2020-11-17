@@ -26,7 +26,7 @@ public class editResults extends HttpServlet {
         String klubb = req.getParameter("klubb");
 
         double femtusen_tid=Double.parseDouble(req.getParameter("femtusen_tid"));
-        int femtusen_watt=Integer.parseInt(req.getParameter("fremtusen_watt"));
+        int femtusen_watt=Integer.parseInt(req.getParameter("femtusen_watt"));
         double tretusen_tid=Double.parseDouble(req.getParameter("tretusen_tid"));
         double totusen_tid=Double.parseDouble(req.getParameter("totusen_tid"));
         int totusen_watt=Integer.parseInt(req.getParameter("totusen_watt"));

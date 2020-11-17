@@ -29,60 +29,69 @@
     }
     %>
 </header>
+<div class="jumbotron main-img">
+    <div class="container">
+        <h1 class="display-3">Velkommen til Norges Roforbund</h1>
+        <h4>Her finner du nye og gamle testresultater til alle utøvere i roforbundet</h4>
+        <br><br><br>
 
-    <h1>
-        Velkommen ${user}<br>
-    </h1>
+    </div>
+</div>
+
+
+<div class="container">
+    <h2>
+        <% if(session.getAttribute("user")!=null) {
+            Object x = session.getAttribute("user");
+            out.print("Du er logget på som " + x);
+        }
+        %>
+    </h2> <br>
 
     <div class="row">
-        <div class="box">
-            <h2>Siste resultater</h2>
-            <p>
-                Se resultatene fra siste test. <br>
-                <a href="latestResults.jsp" class="btn">Siste resultater!</a>
-            </p>
+        <div class="col-md-4">
+            <h2>Siste testresultater</h2>
+            <p>Alle testresultatene fra uke 44 er når tiljegelig! Sjekk de ut. :) </p><br><br>
+            <p><a class="btn btn-primary" href="latestResults.jsp" role="button">Siste testresultater</a></p>
         </div>
-        <div class="box">
+        <div class="col-md-4">
             <h2>Søk etter resultater</h2>
-            <p>
-                <a href="søkResultater.jsp" class="btn">Resultater!</a>
-            </p>
+            <p>Her kan su spesifisere søket ditt etter en utøver.</p><br><br>
+            <p><a class="btn btn-primary" href="søkResultater.jsp" role="button">Søk etter resultater</a></p>
         </div>
-        <div class="box">
+        <div class="col-md-4">
             <h2>Top resultater</h2>
-            <p>
-                Se de beste resultatene fra hver klasse. <br>
-                <a href="#" class="btn">Resultater!</a>
-            </p>
+            <p>Velg en klasse og få ut det beste resultatene.</p> <br><br><br>
+            <p><a class="btn btn-primary" href="" role="button">Vis de beste resultatene</a></p>
         </div>
     </div>
+    <hr>
+</div>
 <%
 
     if(session.getAttribute("user")!=null) {
-    out.print("<div class=\"row\" >\n" +
-            "        <div class=\"box\" >\n" +
-            "            <h2> Legg inn resultater</h2>\n" +
-            "            <p>\n" +
-            "            Legg til nye resultater ! <br>\n" +
-            "                <a href = \"leggInnResultater.jsp\" class=\"btn\" > Legg inn resultater.</a>\n" +
-            "            </p>\n" +
-            "        </div>\n" +
-            "        <div class=\"box\">\n" +
-            "            <h2> Endre eller slette resultater</h2>\n" +
-            "            <p>\n" +
-            "            Her kan man endre eller slette gamle eller ny resultater.<br>\n" +
-            "            <a href = \"editOrDeleteResults.jsp\" class=\"btn\" > Endre eller slett ! </a>\n" +
-            "            </p>\n" +
-            "        </div>\n" +
-            "        <div class=\"box\">\n" +
-            "            <h2> Legg til eller endre utøver informasjon</h2>\n" +
-            "            <p>\n" +
-            "            Her kan man endre informasjonen om en utøver eller legge til nye.<br>\n" +
-            "            <a href=\"#\" class=\"btn\"> Endre/legg til eller slett</a>\n" +
-            "            </p>\n" +
-            "        </div>\n" +
-            "    </div>");
-    } %>
+    out.print("  <div class=\"container\">\n" +
+            "    <div class=\"row\">\n" +
+            "      <div class=\"col-md-4\">\n" +
+            "        <h2>Legg inn nye resultater</h2>\n" +
+            "        <p>Her kan trenere og forbunde legge inn nye resultater</p><br><br><br><br>\n" +
+            "        <p><a class=\"btn btn-primary\" href=\"leggInnResultater.jsp\" role=\"button\">Legg in nye resultater</a></p>\n" +
+            "      </div>\n" +
+            "      <div class=\"col-md-4\">\n" +
+            "        <h2>Endre eller slette resultat</h2>\n" +
+            "        <p>Her kan trenere og forbundet endre eller slette resultater</p><br><br><br>\n" +
+            "        <p><a class=\"btn btn-primary\" href=\"editOrDeleteResults.jsp\" role=\"button\">Endre eller slett</a></p>\n" +
+            "      </div>\n" +
+            "      <div class=\"col-md-4\">\n" +
+            "        <h2>Endre eller legg til en utøver</h2>\n" +
+            "        <p>Her kan man endre infromasjonen om en utøverer eller legge til nye</p><br><br><br>\n" +
+            "        <p><a class=\"btn btn-primary\" href=\"#\" role=\"button\">Endre eller slett</a></p>\n" +
+            "      </div>\n" +
+            "    </div>\n" +
+            "    <hr>\n" +
+            "  </div>");
+    };
+%>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

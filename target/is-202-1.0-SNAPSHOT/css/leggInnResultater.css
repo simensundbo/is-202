@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     background-color: beige;
     height: 100vh;
 }
@@ -40,6 +40,10 @@ body {
     height: 20px;
     font-size: 16px;
 }
+.Filtrer input{
+    height: 20px;
+    font-size: 16px;
+}
 .Klubb{
     width: 120px;
 }
@@ -49,8 +53,12 @@ body {
     font-size: 16px;
     height: 20px;
 }
-.ÅrogUke{
+.Uke{
     width: 80px;
+}
+.ÅrogUkeFilter input{
+    height: 20px;
+    font-size: 16px;
 }
 .Klasse{
     width: 90px;

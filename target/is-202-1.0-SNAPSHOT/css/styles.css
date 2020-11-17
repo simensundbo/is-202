@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    height: 100vh;
 }
 
 .login-box {
@@ -68,3 +68,12 @@ a {
     width: 33.33%;
     padding: 15px;
 }
+
+.main-img {
+    background-image: url("../images/Norske ro årer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
