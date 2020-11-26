@@ -1,10 +1,13 @@
 package model;
 
 
+import com.mysql.cj.protocol.Resultset;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class ResultModel {
     private int resultatID;
@@ -29,11 +32,12 @@ public class ResultModel {
     private int sargeant;
     private int kroppshev;
 
-    private final String addResultSQL= "insert into 202db.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-    private final String searchSQL= "select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?";
+    private final String addResultSQL= "insert into 202db.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    private final String searchSQL= "select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?;";
     private final String deleteSQL= "delete from 202db.results where ResultatID=?;";
     private final String updateSQL= "update 202db.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
     private final String resultByIdSQL= "select * from 202db.results where ResultatID=?;";
+    private final String listAllResultsSQL = "select * from 202db.results;";
 
 
     public int getResultatID() {
@@ -358,10 +362,53 @@ public class ResultModel {
                 setSargeant(rs.getInt(20));
                 setKroppshev(rs.getInt(21));
             }
+
+
         }catch(Exception e)
         {System.out.println(e);}
 
         return false;
+    }
+
+    public boolean listAllResults() {
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps=con.prepareStatement(listAllResultsSQL);
+
+            ResultSet rs=ps.executeQuery();
+
+            ArrayList<ResultSet> resultater = new ArrayList<>();
+
+            while (rs.next()) {
+                setResultatID(rs.getInt(1));
+                setÅr(rs.getInt(2));
+                setUke(rs.getInt(3));
+                setScore(rs.getDouble(4));
+                setFornavn(rs.getString(5));
+                setEtternavn(rs.getString(6));
+                setKlasse(rs.getString(7));
+                setKlubb(rs.getString(8));
+                setFemtusen_watt(rs.getInt(9));
+                setFemtusen_tid(rs.getDouble(10));
+                setTretusen_tid(rs.getDouble(11));
+                setTotusen_tid(rs.getDouble(12));
+                setTotusen_watt(rs.getInt(13));
+                setSekstiwatt(rs.getInt(14));
+                setLiggroKilo(rs.getInt(15));
+                setLiggroProsent(rs.getDouble(16));
+                setKnebøykilo(rs.getInt(17));
+                setKnebøyprosent(rs.getInt(18));
+                setBevegelighet(rs.getInt(19));
+                setSargeant(rs.getInt(20));
+                setKroppshev(rs.getInt(21));
+
+                resultater.add(rs);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return true;
     }
 
 }

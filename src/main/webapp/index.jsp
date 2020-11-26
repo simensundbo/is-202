@@ -62,11 +62,12 @@
         <div class="col-md-4">
             <h2>Top resultater</h2>
             <p>Velg en klasse og få ut det beste resultatene.</p> <br><br><br>
-            <p><a class="btn btn-primary" href="" role="button">Vis de beste resultatene</a></p>
+            <p><a class="btn btn-primary" href="listallresultstest.jsp" role="button">Vis de beste resultatene</a></p>
         </div>
     </div>
     <hr>
 </div>
+
 <%
 
     if(session.getAttribute("user")!=null) {
@@ -74,7 +75,7 @@
             "    <div class=\"row\">\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Legg inn nye resultater</h2>\n" +
-            "        <p>Her kan trenere og forbunde legge inn nye resultater</p><br><br><br><br>\n" +
+            "        <p>Her kan trenere og forbunde legge inn nye resultater</p><br><br><br><br><br>\n" +
             "        <p><a class=\"btn btn-primary\" href=\"leggInnResultater.jsp\" role=\"button\">Legg in nye resultater</a></p>\n" +
             "      </div>\n" +
             "      <div class=\"col-md-4\">\n" +
@@ -85,13 +86,20 @@
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller legg til en utøver</h2>\n" +
             "        <p>Her kan man endre infromasjonen om en utøverer eller legge til nye</p><br><br><br>\n" +
-            "        <p><a class=\"btn btn-primary\" href=\"#\" role=\"button\">Endre eller slett</a></p>\n" +
+            "        <p><a class=\"btn btn-primary\" href=\"getAthletes\" role=\"button\">Endre eller slett</a></p>\n" +
             "      </div>\n" +
             "    </div>\n" +
             "    <hr>\n" +
             "  </div>");
     };
 %>
+
+<footer class="container">
+    <p>
+        Gruppe 1<br>
+        UIA - 2020
+    </p>
+</footer>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -118,7 +118,7 @@
             </form>
         </td>
         <td>
-            <form action="edit.jsp" method="post">
+            <form action="editResults.jsp" method="post">
                 <button type="submit" name="resultatID" value="<%=result.getString("ResultatID") %>">Endre</button>
             </form>
         </td>

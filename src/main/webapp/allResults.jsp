@@ -107,14 +107,15 @@
             <td><%=result.getString("sargeant_cm") %></td>
             <td><%=result.getString("kroppshev") %></td>
         </tr>
-        <%}%>
+        <%} %>
         </tbody>
     </table>
 
 <%} catch(Exception e) {
     out.print(e.getStackTrace());
-} finally {
 
+} finally {
+        
 }
 %>
 

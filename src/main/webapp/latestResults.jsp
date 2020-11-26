@@ -53,7 +53,7 @@
     try
     {
         Connection con = ConnectionProvider.getCon();
-        PreparedStatement ps = con.prepareStatement("select år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev from results where år=2020 and uke=11;");
+        PreparedStatement ps = con.prepareStatement("select år, uke, Score ,fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev from results where år=2020 and uke=44;");
         ResultSet result = ps.executeQuery();
 %>
 <h1>Siste testresultater</h1> <br>
@@ -62,6 +62,7 @@
     <tr>
         <th>År</th>
         <th>Uke</th>
+        <th>Score</th>
         <th>Fornavn</th>
         <th>Etternavn</th>
         <th>Klass</th>
@@ -88,6 +89,7 @@
     <tr>
         <td><%=result.getString("år") %></td>
         <td><%=result.getString("uke") %></td>
+        <td><%=result.getString("Score") %></td>
         <td><%=result.getString("fornavn") %></td>
         <td><%=result.getString("etternavn") %></td>
         <td><%=result.getString("klasse") %></td>

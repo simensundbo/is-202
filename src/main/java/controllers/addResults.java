@@ -18,26 +18,39 @@ public class addResults extends HttpServlet {
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
 
-        String klubb=req.getParameter("Klubb");
-        String fornavn=req.getParameter("Fornavn");
-        String etternavn=req.getParameter("Etternavn");
+        String klubb = req.getParameter("Klubb");
+        String fornavn = req.getParameter("Fornavn");
+        String etternavn = req.getParameter("Etternavn");
         int år = Integer.parseInt(req.getParameter("aar"));
-        int uke=Integer.parseInt(req.getParameter("Uke"));
-        String klasse=req.getParameter("Klasse");
+        int uke = Integer.parseInt(req.getParameter("Uke"));
+        String klasse = req.getParameter("Klasse");
 
-        double femtusen_tid=Double.parseDouble(req.getParameter("5000tid"));
-        int femtusen_watt=Integer.parseInt(req.getParameter("5000watt"));
-        double tretusen_tid=Double.parseDouble(req.getParameter("3000tid"));
-        double totusen_tid=Double.parseDouble(req.getParameter("2000tid"));
-        int totusen_watt=Integer.parseInt(req.getParameter("2000watt"));
-        double sekstiwatt=Double.parseDouble(req.getParameter("60watt"));
-        double liggroKilo=Double.parseDouble(req.getParameter("LiggroKilo"));
-        double liggroProsent=Double.parseDouble(req.getParameter("LiggroProsent"));
-        int knebøykilo=Integer.parseInt(req.getParameter("KneboyKilo"));
-        double knebøyprosent=Double.parseDouble(req.getParameter("KneboyProsent"));
-        int bevegelighet=Integer.parseInt(req.getParameter("Bevegelighet"));
-        int sargeant=Integer.parseInt(req.getParameter("Sargeant"));
-        int kroppshev=Integer.parseInt(req.getParameter("Kroppshev"));
+        double femtusen_tid = Double.parseDouble(req.getParameter("5000tid"));
+        int femtusen_watt = Integer.parseInt(req.getParameter("5000watt"));
+        double tretusen_tid = Double.parseDouble(req.getParameter("3000tid"));
+        double totusen_tid = Double.parseDouble(req.getParameter("2000tid"));
+        int totusen_watt = Integer.parseInt(req.getParameter("2000watt"));
+        double sekstiwatt = Double.parseDouble(req.getParameter("60watt"));
+        double liggroKilo = Double.parseDouble(req.getParameter("LiggroKilo"));
+        double liggroProsent = Double.parseDouble(req.getParameter("LiggroProsent"));
+        int knebøykilo = Integer.parseInt(req.getParameter("KneboyKilo"));
+        double knebøyprosent = Double.parseDouble(req.getParameter("KneboyProsent"));
+        int bevegelighet = Integer.parseInt(req.getParameter("Bevegelighet"));
+        int sargeant = Integer.parseInt(req.getParameter("Sargeant"));
+        int kroppshev = Integer.parseInt(req.getParameter("Kroppshev"));
+
+        System.out.println(klasse);
+
+
+        if (klasse.equals("Senior menn") || klasse.equals("Senior kvinner")) {
+            System.out.println("Senior");
+        } else if(klasse.equals("Junior A gutter") || klasse.equals("Junior A jenter")) {
+            System.out.println("Junior a");
+        } else if(klasse.equals("Junior B gutter") || klasse.equals("Junior B jenter")) {
+            System.out.println("Junior b");
+        }
+
+
 
         ResultModel model = new ResultModel();
 
@@ -75,12 +88,11 @@ public class addResults extends HttpServlet {
             res.sendRedirect("index.jsp");
 
         } else {
-            res.sendRedirect("login.jsp");
+            res.sendRedirect("LeggInnResultater.jsp");
         }
 
     }
 
-
-}
+ }
 
 

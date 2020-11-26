@@ -28,6 +28,8 @@
     }
     %>
 </header>
+
+
 <div class="regform">
     <form action="addResults" method="post">
         <h1>Legg inn resultater</h1>
