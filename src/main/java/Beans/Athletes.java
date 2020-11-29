@@ -1,4 +1,4 @@
-package model;
+package Beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,8 +15,6 @@ public class Athletes {
     private int høyde;
     private String klubb;
     private String klasse;
-
-    private final String allAthletesSQL = ("select * from 202db.athletes;");
 
 
     public int getUtøverID() {
@@ -84,9 +82,7 @@ public class Athletes {
     }
 
 
-
-
-    public Athletes(int utøverID, String fornavn, String etternavn, int fødeselsår, int vekt, int høyde, String klubb, String klasse){
+    public Athletes(int utøverID, String fornavn, String etternavn, int fødeselsår, int vekt, int høyde, String klubb, String klasse) {
 
         this.utøverID = utøverID;
         this.fornavn = fornavn;

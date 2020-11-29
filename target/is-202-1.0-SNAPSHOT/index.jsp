@@ -1,4 +1,3 @@
-<%@ page import="helpers.navbar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -62,7 +61,7 @@
         <div class="col-md-4">
             <h2>Top resultater</h2>
             <p>Velg en klasse og få ut det beste resultatene.</p> <br><br><br>
-            <p><a class="btn btn-primary" href="listallresultstest.jsp" role="button">Vis de beste resultatene</a></p>
+            <p><a class="btn btn-primary" href="listalltest" role="button">Vis de beste resultatene</a></p>
         </div>
     </div>
     <hr>

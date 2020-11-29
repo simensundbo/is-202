@@ -1,7 +1,8 @@
 package model;
 
 
-import com.mysql.cj.protocol.Resultset;
+import Beans.Athletes;
+import Beans.Results;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -370,45 +371,49 @@ public class ResultModel {
         return false;
     }
 
-    public boolean listAllResults() {
+    public ArrayList<Results> getAllResults(){
+
+        ArrayList<Results> a = new ArrayList<>();
         try {
             Connection con = ConnectionProvider.getCon();
             PreparedStatement ps=con.prepareStatement(listAllResultsSQL);
 
             ResultSet rs=ps.executeQuery();
 
-            ArrayList<ResultSet> resultater = new ArrayList<>();
-
             while (rs.next()) {
-                setResultatID(rs.getInt(1));
-                setÅr(rs.getInt(2));
-                setUke(rs.getInt(3));
-                setScore(rs.getDouble(4));
-                setFornavn(rs.getString(5));
-                setEtternavn(rs.getString(6));
-                setKlasse(rs.getString(7));
-                setKlubb(rs.getString(8));
-                setFemtusen_watt(rs.getInt(9));
-                setFemtusen_tid(rs.getDouble(10));
-                setTretusen_tid(rs.getDouble(11));
-                setTotusen_tid(rs.getDouble(12));
-                setTotusen_watt(rs.getInt(13));
-                setSekstiwatt(rs.getInt(14));
-                setLiggroKilo(rs.getInt(15));
-                setLiggroProsent(rs.getDouble(16));
-                setKnebøykilo(rs.getInt(17));
-                setKnebøyprosent(rs.getInt(18));
-                setBevegelighet(rs.getInt(19));
-                setSargeant(rs.getInt(20));
-                setKroppshev(rs.getInt(21));
+                Results resultater = new Results(
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getInt(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9),
+                        rs.getDouble(10),
+                        rs.getDouble(11),
+                        rs.getDouble(12),
+                        rs.getInt(13),
+                        rs.getInt(14),
+                        rs.getInt(15),
+                        rs.getDouble(16),
+                        rs.getInt(17),
+                        rs.getInt(18),
+                        rs.getInt(19),
+                        rs.getInt(20),
+                        rs.getInt(21)
+                );
 
-                resultater.add(rs);
+                a.add(resultater);
             }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        return true;
+        return a;
     }
+
 
 }

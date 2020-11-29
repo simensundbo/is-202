@@ -1,6 +1,6 @@
 package controllers;
 
-import model.Athletes;
+import Beans.Athletes;
 import model.AthletesModel;
 
 import javax.servlet.RequestDispatcher;

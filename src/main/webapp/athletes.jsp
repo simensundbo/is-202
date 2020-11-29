@@ -1,5 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="model.Athletes" %><%--
+<%@ page import="Beans.Athletes" %><%--
   Created by IntelliJ IDEA.
   User: simensundbo
   Date: 24/11/2020
@@ -61,7 +61,7 @@
     </thead>
     <%
         ArrayList<Athletes> a = (ArrayList<Athletes>) request.getAttribute("data");
-        for(Athletes utøver:a) {
+        for(Athletes utøver : a) {
     %>
     <tbody>
     <tr>

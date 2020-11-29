@@ -1,6 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="model.ResultModel" %><%--
+<%@ page import="model.ResultModel" %>
+<%@ page import="Beans.Results" %><%--
   Created by IntelliJ IDEA.
   User: simensundbo
   Date: 26/11/2020
@@ -41,21 +42,34 @@
     </thead>
     <tbody>
         <%
-            ResultModel model = new ResultModel();
-            model.listAllResults();
+            ArrayList<Results> r = (ArrayList<Results>) request.getAttribute("results");
+            for(Results list : r) {
 
         %>
 
-
-            <td><%=model.getUke()%></td>
-            <td><%=model.getÅr()%></td>
-            <td><%=model.getScore()%></td>
-            <td><%=model.getFornavn()%></td>
-            <td><%=model.getEtternavn()%></td>
-
-
-
-
+        <tr>
+                <td><%=list.getÅr()%></td>
+                <td><%=list.getUke()%></td>
+                <td><%=list.getScore()%></td>
+                <td><%=list.getFornavn()%></td>
+                <td><%=list.getEtternavn()%></td>
+                <td><%=list.getKlasse()%></td>
+                <td><%=list.getKlubb()%></td>
+                <td><%=list.getFemtusen_watt()%></td>
+                <td><%=list.getFemtusen_tid()%></td>
+                <td><%=list.getTretusen_tid()%></td>
+                <td><%=list.getTotusen_tid()%></td>
+                <td><%=list.getTotusen_watt()%></td>
+                <td><%=list.getSekstiwatt()%></td>
+                <td><%=list.getLiggroKilo()%></td>
+                <td><%=list.getLiggroProsent()%></td>
+                <td><%=list.getKnebøykilo()%></td>
+                <td><%=list.getKnebøyprosent()%></td>
+                <td><%=list.getBevegelighet()%></td>
+                <td><%=list.getSargeant()%></td>
+                <td><%=list.getKroppshev()%></td>
+                <%}%>
+        </tr>
 
 
 

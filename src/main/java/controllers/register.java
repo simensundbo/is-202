@@ -27,7 +27,6 @@ public class register extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
 
         res.setContentType("test/html");
-        PrintWriter out = res.getWriter();
 
         String u=req.getParameter("uname");
         String p=req.getParameter("pass");
@@ -50,13 +49,6 @@ public class register extends HttpServlet {
         }
 
 
-        out.close();
-
     }
-
-    private void insert(HttpServletRequest req, HttpServletRequest res){
-
-    }
-
 
 }
