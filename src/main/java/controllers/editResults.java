@@ -66,7 +66,7 @@ public class editResults extends HttpServlet {
         boolean status = model.update();
 
         if(status){
-            res.sendRedirect("editOrDeleteResults.jsp");
+            res.sendRedirect("getAllResults");
         } else {
             res.sendRedirect("Error.jsp");
         }

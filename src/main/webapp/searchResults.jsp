@@ -5,7 +5,6 @@
 <%@ page import="model.ConnectionProvider" %>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="helpers.navbar" %>
 <html>
 <head>
     <title>Resultater</title>

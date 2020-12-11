@@ -10,7 +10,6 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="model.ConnectionProvider" %>
 <%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="helpers.navbar" %>
 
 <!DOCTYPE html>
 <html>

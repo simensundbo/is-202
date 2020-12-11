@@ -32,7 +32,7 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="#">Resultater</a></li>
+            <li><a href="allResults.jsp">Resultater</a></li>
             <li><a href="roing.no">Norges Roforbund</a></li>
             <li><a href="#">Kontakt oss</a></li>
         </ul>
@@ -47,15 +47,6 @@
 </header>
 
 <h1>Alle testresultater</h1> <br>
-
-    <%
-        if(request.getAttribute("deleteSucceeds")!=null) {
-            out.println(request.getAttribute("deleteSucceeds"));
-
-        } else if (request.getAttribute("deleteError")!=null) {
-            out.println(request.getAttribute("deleteError"));
-        }
-    %>
 <table class="table table-hover" id="Results" border="2">
     <thead>
     <tr>
@@ -79,50 +70,38 @@
         <th>Bevegelighet</th>
         <th>Sargent</th>
         <th>Kroppshev</th>
-        <th>Slett</th>
-        <th>Endre</th>
     </tr>
     </thead>
     <tbody>
-    <%
-        ArrayList<Results> r = (ArrayList<Results>) request.getAttribute("results");
-        for(Results list : r) {
+        <%
+            ArrayList<Results> r = (ArrayList<Results>) request.getAttribute("results");
+            for(Results list : r) {
 
-    %>
+        %>
 
-    <tr>
-        <td><%=list.getÅr()%></td>
-        <td><%=list.getUke()%></td>
-        <td><%=list.getScore()%></td>
-        <td><%=list.getFornavn()%></td>
-        <td><%=list.getEtternavn()%></td>
-        <td><%=list.getKlasse()%></td>
-        <td><%=list.getKlubb()%></td>
-        <td><%=list.getFemtusen_watt()%></td>
-        <td><%=list.getFemtusen_tid()%></td>
-        <td><%=list.getTretusen_tid()%></td>
-        <td><%=list.getTotusen_tid()%></td>
-        <td><%=list.getTotusen_watt()%></td>
-        <td><%=list.getSekstiwatt()%></td>
-        <td><%=list.getLiggroKilo()%></td>
-        <td><%=list.getLiggroProsent()%></td>
-        <td><%=list.getKnebøykilo()%></td>
-        <td><%=list.getKnebøyprosent()%></td>
-        <td><%=list.getBevegelighet()%></td>
-        <td><%=list.getSargeant()%></td>
-        <td><%=list.getKroppshev()%></td>
-        <td>
-            <form action="deleteResults" method="post">
-                <button value="<%=list.getResultatID()%>" type="submit" name="resultatID">Slett</button>
-            </form>
-        </td>
-        <td>
-            <form action="editResults.jsp" method="post">
-                <button type="submit" name="resultatID" value="<%=list.getResultatID() %>">Endre</button>
-            </form>
-        </td>
-        <%}%>
-    </tr>
+        <tr>
+            <td><%=list.getÅr()%></td>
+            <td><%=list.getUke()%></td>
+            <td><%=list.getScore()%></td>
+            <td><%=list.getFornavn()%></td>
+            <td><%=list.getEtternavn()%></td>
+            <td><%=list.getKlasse()%></td>
+            <td><%=list.getKlubb()%></td>
+            <td><%=list.getFemtusen_watt()%></td>
+            <td><%=list.getFemtusen_tid()%></td>
+            <td><%=list.getTretusen_tid()%></td>
+            <td><%=list.getTotusen_tid()%></td>
+            <td><%=list.getTotusen_watt()%></td>
+            <td><%=list.getSekstiwatt()%></td>
+            <td><%=list.getLiggroKilo()%></td>
+            <td><%=list.getLiggroProsent()%></td>
+            <td><%=list.getKnebøykilo()%></td>
+            <td><%=list.getKnebøyprosent()%></td>
+            <td><%=list.getBevegelighet()%></td>
+            <td><%=list.getSargeant()%></td>
+            <td><%=list.getKroppshev()%></td>
+            <%}%>
+        </tr>
 
 
 

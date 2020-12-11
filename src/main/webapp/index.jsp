@@ -59,9 +59,13 @@
             <p><a class="btn btn-primary" href="søkResultater.jsp" role="button">Søk etter resultater</a></p>
         </div>
         <div class="col-md-4">
-            <h2>Top resultater</h2>
-            <p>Velg en klasse og få ut det beste resultatene.</p> <br><br><br>
-            <p><a class="btn btn-primary" href="listalltest" role="button">Vis de beste resultatene</a></p>
+            <h2>Vis alle resultater</h2>
+            <p>Her kan du se både nye og gammle resultater.</p> <br><br><br>
+            <form action="getAllResults">
+                <input type="hidden" name="results" value="Resultater">
+                <input type="submit" class="btn btn-primary" value="Vis alle resultater">
+            </form>
+
         </div>
     </div>
     <hr>
@@ -80,7 +84,9 @@
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller slette resultat</h2>\n" +
             "        <p>Her kan trenere og forbundet endre eller slette resultater</p><br><br><br>\n" +
-            "        <p><a class=\"btn btn-primary\" href=\"editOrDeleteResults.jsp\" role=\"button\">Endre eller slett</a></p>\n" +
+            "            <form action=\"getAllResults\">\n" +
+            "                <input type=\"submit\" class=\"btn btn-primary\" value=\"Endre eller slette!\">\n" +
+            "            </form> \n" +
             "      </div>\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller legg til en utøver</h2>\n" +
