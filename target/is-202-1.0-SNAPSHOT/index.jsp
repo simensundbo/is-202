@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css" >
     <link rel="stylesheet" href="css/styles.css" >
+    <link rel="shortcut icon" href="images/norges%20roforbund.png">
 
 
 
@@ -15,7 +16,7 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
             <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
             <li><a href="#">Kontakt oss</a></li>
         </ul>
@@ -51,7 +52,7 @@
         <div class="col-md-4">
             <h2>Siste testresultater</h2>
             <p>Alle testresultatene fra uke 44 er når tilgjengelig! Sjekk de ut. :) </p><br><br>
-            <p><a class="btn btn-primary" href="latestResults.jsp" role="button">Siste testresultater</a></p>
+            <p><a class="btn btn-primary" href="newestResults" role="button">Siste testresultater</a></p>
         </div>
         <div class="col-md-4">
             <h2>Søk etter resultater</h2>

@@ -27,10 +27,6 @@ public class getAllResults extends HttpServlet {
 
         req.setAttribute("results", result);
 
-        System.out.println(req.getParameter("results"));
-
-
-
         if(req.getParameter("results") != null) {
             RequestDispatcher rd = req.getRequestDispatcher("Results.jsp");
             rd.forward(req, res);
