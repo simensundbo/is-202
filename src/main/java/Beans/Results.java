@@ -202,7 +202,7 @@ public class Results {
         this.år = år;
         this.score = score;
         this.uke = uke;
-        this.klubb = klasse;
+        this.klasse = klasse;
         this.femtusen_tid = femtusen_tid;
         this.femtusen_watt = femtusen_watt;
         this.tretusen_tid = tretusen_tid;

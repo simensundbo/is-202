@@ -1,7 +1,5 @@
 package model;
 
-
-import Beans.Athletes;
 import Beans.Results;
 
 import java.sql.Connection;
@@ -39,7 +37,7 @@ public class ResultModel {
     private final String updateSQL= "update 202db.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
     private final String resultByIdSQL= "select * from 202db.results where ResultatID=?;";
     private final String listAllResultsSQL = "select * from 202db.results;";
-
+    private final String newestResultsSQL = "select * from 202db.results where uke=44;";
 
     public int getResultatID() {
         return resultatID;
@@ -413,6 +411,50 @@ public class ResultModel {
         }
 
         return a;
+    }
+
+    public ArrayList<Results> newestResults(){
+
+        ArrayList<Results> newestResults = new ArrayList<>();
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps=con.prepareStatement(newestResultsSQL);
+
+            ResultSet rs=ps.executeQuery();
+
+            while (rs.next()) {
+                Results resultater = new Results(
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getInt(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9),
+                        rs.getDouble(10),
+                        rs.getDouble(11),
+                        rs.getDouble(12),
+                        rs.getInt(13),
+                        rs.getInt(14),
+                        rs.getInt(15),
+                        rs.getDouble(16),
+                        rs.getInt(17),
+                        rs.getInt(18),
+                        rs.getInt(19),
+                        rs.getInt(20),
+                        rs.getInt(21)
+                );
+
+                newestResults.add(resultater);
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return newestResults;
     }
 
 

@@ -1,4 +1,3 @@
-<%@ page import="helpers.navbar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,7 +13,7 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="">Resultater</a></li>
             <li><a href="roing.no">Norges Roforbund</a></li>
             <li><a href="#">Kontakt oss</a></li>
         </ul>

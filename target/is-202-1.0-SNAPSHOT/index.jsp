@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css" >
     <link rel="stylesheet" href="css/styles.css" >
+    <link rel="shortcut icon" href="images/norges%20roforbund.png">
 
 
 
@@ -15,7 +16,7 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
             <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
             <li><a href="#">Kontakt oss</a></li>
         </ul>
@@ -51,7 +52,7 @@
         <div class="col-md-4">
             <h2>Siste testresultater</h2>
             <p>Alle testresultatene fra uke 44 er når tilgjengelig! Sjekk de ut. :) </p><br><br>
-            <p><a class="btn btn-primary" href="latestResults.jsp" role="button">Siste testresultater</a></p>
+            <p><a class="btn btn-primary" href="newestResults" role="button">Siste testresultater</a></p>
         </div>
         <div class="col-md-4">
             <h2>Søk etter resultater</h2>
@@ -59,9 +60,13 @@
             <p><a class="btn btn-primary" href="søkResultater.jsp" role="button">Søk etter resultater</a></p>
         </div>
         <div class="col-md-4">
-            <h2>Top resultater</h2>
-            <p>Velg en klasse og få ut det beste resultatene.</p> <br><br><br>
-            <p><a class="btn btn-primary" href="listalltest" role="button">Vis de beste resultatene</a></p>
+            <h2>Vis alle resultater</h2>
+            <p>Her kan du se både nye og gammle resultater.</p> <br><br><br>
+            <form action="getAllResults">
+                <input type="hidden" name="results" value="Resultater">
+                <input type="submit" class="btn btn-primary" value="Vis alle resultater">
+            </form>
+
         </div>
     </div>
     <hr>
@@ -80,7 +85,9 @@
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller slette resultat</h2>\n" +
             "        <p>Her kan trenere og forbundet endre eller slette resultater</p><br><br><br>\n" +
-            "        <p><a class=\"btn btn-primary\" href=\"editOrDeleteResults.jsp\" role=\"button\">Endre eller slett</a></p>\n" +
+            "            <form action=\"getAllResults\">\n" +
+            "                <input type=\"submit\" class=\"btn btn-primary\" value=\"Endre eller slette!\">\n" +
+            "            </form> \n" +
             "      </div>\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller legg til en utøver</h2>\n" +

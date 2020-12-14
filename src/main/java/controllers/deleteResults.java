@@ -29,19 +29,13 @@ public class deleteResults extends HttpServlet {
             HttpSession session = req.getSession();
             session.getAttribute("user");
             req.setAttribute("deleteSucceeds", "Resultatet ble slettet!");
-            RequestDispatcher rd = req.getRequestDispatcher("editOrDeleteResults.jsp");
-            rd.forward(req, res);
+            res.sendRedirect("getAllResults");
 
         } else {
             req.setAttribute("deleteError", "En feil skjedde. Prøv på nytt!");
-            RequestDispatcher rd = req.getRequestDispatcher("editOrDeleteResults.jsp");
-            rd.forward(req, res);
+            res.sendRedirect("getAllResults");
         }
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-    }
 }
