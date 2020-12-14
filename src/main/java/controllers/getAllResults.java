@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -27,7 +28,9 @@ public class getAllResults extends HttpServlet {
 
         req.setAttribute("results", result);
 
-        if(req.getParameter("results") != null) {
+        HttpSession session = req.getSession();
+
+        if(session.getAttribute("user") == null) {
             RequestDispatcher rd = req.getRequestDispatcher("Results.jsp");
             rd.forward(req, res);
         } else {

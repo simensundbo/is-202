@@ -19,6 +19,9 @@ public class AthletesModel {
     private String klubb;
     private String klasse;
 
+    private final String allAthletesSQL = ("select * from 202db.athletes;");
+    private final String deleteSQL = ("delete from 202db.athletes where UtøverID=?;");
+
     public int getUtøverID() {
         return utøverID;
     }
@@ -84,10 +87,6 @@ public class AthletesModel {
     }
 
 
-
-    private String allAthletesSQL = ("select * from 202db.athletes;");
-
-
     public ArrayList<Athletes> getAllAthletes(){
 
         ArrayList<Athletes> a = new ArrayList<>();
@@ -117,6 +116,27 @@ public class AthletesModel {
         }
 
         return a;
+    }
+
+
+    public boolean delete(){
+        try{
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps = con.prepareStatement(deleteSQL);
+
+            ps.setInt(1, getUtøverID());
+
+            int i= ps.executeUpdate();
+            if (i!=0) {
+                return true;
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+        return false;
     }
 
 

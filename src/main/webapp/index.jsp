@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Velkommen</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css" >
     <link rel="stylesheet" href="css/styles.css" >
@@ -63,7 +64,6 @@
             <h2>Vis alle resultater</h2>
             <p>Her kan du se både nye og gammle resultater.</p> <br><br><br>
             <form action="getAllResults">
-                <input type="hidden" name="results" value="Resultater">
                 <input type="submit" class="btn btn-primary" value="Vis alle resultater">
             </form>
 
@@ -92,7 +92,9 @@
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller legg til en utøver</h2>\n" +
             "        <p>Her kan man endre infromasjonen om en utøverer eller legge til nye</p><br><br><br>\n" +
-            "        <p><a class=\"btn btn-primary\" href=\"getAthletes\" role=\"button\">Endre eller slett</a></p>\n" +
+            "            <form action=\"getAthletes\">\n" +
+            "                <input type=\"submit\" class=\"btn btn-primary\" value=\"Endre eller slett\">\n" +
+            "            </form>\n" +
             "      </div>\n" +
             "    </div>\n" +
             "    <hr>\n" +

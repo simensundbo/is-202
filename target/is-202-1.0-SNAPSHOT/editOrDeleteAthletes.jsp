@@ -75,6 +75,16 @@
         <td><%=utøver.getHøyde()%></td>
         <td><%=utøver.getKlubb()%></td>
         <td><%=utøver.getKlasse()%></td>
+        <td>
+            <form action="deleteAthletes" method="post">
+                <button value="<%=utøver.getUtøverID()%>" type="submit" name="utøverID">Slett</button>
+            </form>
+        </td>
+        <td>
+            <form action="editAthletes" method="post">
+                <button value="<%=utøver.getUtøverID()%>" type="submit" name="utøverID">Endre</button>
+            </form>
+        </td>
         <%}%>
     </tr>
     </tbody>
