@@ -52,17 +52,17 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Siste testresultater</h2>
-            <p>Alle testresultatene fra uke 44 er når tilgjengelig! Sjekk de ut. :) </p><br><br>
+            <p>Alle testresultatene fra uke 44 er nå tilgjengelig. Sjekk de ut her! </p><br><br>
             <p><a class="btn btn-primary" href="newestResults" role="button">Siste testresultater</a></p>
         </div>
         <div class="col-md-4">
             <h2>Søk etter resultater</h2>
-            <p>Her kan su spesifisere søket ditt etter en utøver.</p><br><br>
+            <p>Her kan du spesifisere søket ditt etter år og uke.</p><br><br>
             <p><a class="btn btn-primary" href="søkResultater.jsp" role="button">Søk etter resultater</a></p>
         </div>
         <div class="col-md-4">
             <h2>Vis alle resultater</h2>
-            <p>Her kan du se både nye og gammle resultater.</p> <br><br><br>
+            <p>Her kan du se både nye og gamle resultater.</p> <br><br><br>
             <form action="getAllResults">
                 <input type="submit" class="btn btn-primary" value="Vis alle resultater">
             </form>
@@ -79,8 +79,8 @@
             "    <div class=\"row\">\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Legg inn nye resultater</h2>\n" +
-            "        <p>Her kan trenere og forbunde legge inn nye resultater</p><br><br><br><br><br>\n" +
-            "        <p><a class=\"btn btn-primary\" href=\"leggInnResultater.jsp\" role=\"button\">Legg in nye resultater</a></p>\n" +
+            "        <p>Her kan trenere og forbundet legge inn nye resultater</p><br><br><br><br><br>\n" +
+            "        <p><a class=\"btn btn-primary\" href=\"leggInnResultater.jsp\" role=\"button\">Legg inn nye resultater</a></p>\n" +
             "      </div>\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller slette resultat</h2>\n" +
@@ -91,7 +91,7 @@
             "      </div>\n" +
             "      <div class=\"col-md-4\">\n" +
             "        <h2>Endre eller legg til en utøver</h2>\n" +
-            "        <p>Her kan man endre infromasjonen om en utøverer eller legge til nye</p><br><br><br>\n" +
+            "        <p>Her kan man endre informasjonen om en utøverer eller legge til nye</p><br><br><br>\n" +
             "            <form action=\"getAthletes\">\n" +
             "                <input type=\"submit\" class=\"btn btn-primary\" value=\"Endre eller slett\">\n" +
             "            </form>\n" +

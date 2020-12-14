@@ -7,5 +7,11 @@
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://127.0.0.1:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Digital ocean" uuid="754bfc82-b11c-498d-8a6d-e65abb15c8ab">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://mysql-202db-do-user-7402814-0.b.db.ondigitalocean.com:25060</jdbc-url>
+    </data-source>
   </component>
 </project>
