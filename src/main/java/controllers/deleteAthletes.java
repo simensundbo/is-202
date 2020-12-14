@@ -19,8 +19,8 @@ public class deleteAthletes extends HttpServlet {
         int utøverID = Integer.parseInt(req.getParameter("utøverID"));
 
         AthletesModel model = new AthletesModel();
-
-        System.out.println(utøverID);
+        //Burkes for testing
+        //System.out.println(utøverID);
 
         model.setUtøverID(utøverID);
 
