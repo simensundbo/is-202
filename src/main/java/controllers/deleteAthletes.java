@@ -31,7 +31,7 @@ public class deleteAthletes extends HttpServlet {
             session.getAttribute("user");
             res.sendRedirect("getAthletes");
         } else {
-            res.sendRedirect("Error.jsp");
+            res.sendRedirect("500Error.jsp");
         }
     }
 

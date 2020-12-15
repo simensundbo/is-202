@@ -43,7 +43,7 @@ public class addResults extends HttpServlet {
 
 
         if (klasse.equals("Senior menn") || klasse.equals("Senior kvinner")) {
-            System.out.println("Senior");
+            //Formler for utregning av score for senior
         } else if(klasse.equals("Junior A gutter") || klasse.equals("Junior A jenter")) {
             System.out.println("Junior a");
         } else if(klasse.equals("Junior B gutter") || klasse.equals("Junior B jenter")) {

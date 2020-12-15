@@ -71,7 +71,7 @@ public class editResults extends HttpServlet {
             session.getAttribute("user");
             res.sendRedirect("getAllResults");
         } else {
-            res.sendRedirect("Error.jsp");
+            res.sendRedirect("500Error.jsp");
         }
 
     }

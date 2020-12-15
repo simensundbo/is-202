@@ -41,7 +41,7 @@ public class editAthletes extends HttpServlet {
         if(status) {
             res.sendRedirect("getAthletes");
         }else {
-            res.sendRedirect("Error.jsp");
+            res.sendRedirect("500Error.jsp");
         }
     }
 

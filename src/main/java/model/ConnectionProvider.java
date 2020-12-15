@@ -13,6 +13,7 @@ public class ConnectionProvider {   //singleton design pattern.
 
         } catch (Exception e) {
             System.out.println("Tilkoblingen feilet.");
+            e.printStackTrace();
         }
 
     }
