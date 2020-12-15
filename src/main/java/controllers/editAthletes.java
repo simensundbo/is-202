@@ -15,6 +15,8 @@ public class editAthletes extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
+
+        int Id = Integer.parseInt(req.getParameter("utøverID"));
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
         int fødselsår = Integer.parseInt(req.getParameter("fødselsår"));
@@ -25,7 +27,8 @@ public class editAthletes extends HttpServlet {
 
         AthletesModel model = new AthletesModel();
 
-        model.setEtternavn(fornavn);
+        model.setUtøverID(Id);
+        model.setFornavn(fornavn);
         model.setEtternavn(etternavn);
         model.setFødeselsår(fødselsår);
         model.setVekt(vekt);
@@ -34,13 +37,11 @@ public class editAthletes extends HttpServlet {
         model.setKlasse(klasse);
 
         boolean status = model.update();
-        HttpSession session = req.getSession();
 
-        if(status){
-            session.getAttribute("user");
+        if(status) {
             res.sendRedirect("getAthletes");
-        }else{
-            //res.sendRedirect("Error.jsp");
+        }else {
+            res.sendRedirect("Error.jsp");
         }
     }
 

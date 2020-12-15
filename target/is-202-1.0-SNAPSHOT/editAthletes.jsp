@@ -46,6 +46,7 @@
             <h1>Endre utøverinformasjon</h1>
             <div class="navn">
                 <h2>Endre navn og fødselsår</h2>
+                <input hidden type="text" value="<%=model.getUtøverID()%>" name="utøverID">
                 <input type="text" placeholder="Fornavn" value="<%=model.getFornavn()%>" name="fornavn">
                 <input type="text" placeholder="Etternavn" value="<%=model.getEtternavn()%>" name="etternavn">
             </div>
