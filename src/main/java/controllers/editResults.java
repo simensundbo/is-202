@@ -65,8 +65,10 @@ public class editResults extends HttpServlet {
         model.setKroppshev(kroppshev);
 
         boolean status = model.update();
+        HttpSession session = req.getSession();
 
         if(status){
+            session.getAttribute("user");
             res.sendRedirect("getAllResults");
         } else {
             res.sendRedirect("Error.jsp");

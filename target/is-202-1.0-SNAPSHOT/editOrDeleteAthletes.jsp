@@ -81,8 +81,8 @@
             </form>
         </td>
         <td>
-            <form action="editAthletes" method="post">
-                <button value="<%=utøver.getUtøverID()%>" type="submit" name="utøverID">Endre</button>
+            <form action="editAthletes.jsp" method="post">
+                <button value="<%=utøver.getUtøverID()%>" type="submit" name="utoverID">Endre</button>
             </form>
         </td>
         <%}%>

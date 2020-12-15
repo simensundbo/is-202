@@ -186,11 +186,10 @@ public class AthletesModel {
             if (i!=0) {
                 return true;
             }
-
-        }catch (SQLException throwables) {
-            throwables.printStackTrace();
+            
+        }catch (Exception a) {
+            System.out.println(a);
         }
-
         return false;
     }
 }
