@@ -21,6 +21,8 @@ public class AthletesModel {
 
     private final String allAthletesSQL = ("select * from 202db.athletes;");
     private final String deleteSQL = ("delete from 202db.athletes where UtøverID=?;");
+    private final String athleteByIdSQL = ("select * from 202db.athletes where UtøverID=?;");
+    private final String updateSQL = ("update 202db.athletes set Fornavn=?, Etternavn=?, Fødselsår=?, Vekt=?, Høyde=?, Klubb=?, Klasse=? where UtøverID=?;");
 
     public int getUtøverID() {
         return utøverID;
@@ -139,9 +141,58 @@ public class AthletesModel {
         return false;
     }
 
+    public boolean athleteById(){
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps = con.prepareStatement(athleteByIdSQL);
 
+            ps.setInt(1, getUtøverID());
+            ResultSet rs=ps.executeQuery();
 
+            while (rs.next()){
+                setUtøverID(rs.getInt(1));
+                setFornavn(rs.getString(2));
+                setEtternavn(rs.getString(3));
+                setFødeselsår(rs.getInt(4));
+                setVekt(rs.getInt(5));
+                setHøyde(rs.getInt(6));
+                setKlubb(rs.getString(7));
+                setKlasse(rs.getString(8));
+            }
 
+        } catch (Exception i)
+        {
+            System.out.println(i);
+        }
+
+        return false;
+    }
+
+    public boolean update(){
+        try{
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement ps=con.prepareStatement(updateSQL);
+
+            ps.setString(1, getFornavn());
+            ps.setString(2, getEtternavn());
+            ps.setInt(3, getFødeselsår());
+            ps.setInt(4, getVekt());
+            ps.setInt(5, getHøyde());
+            ps.setString(6, getKlubb());
+            ps.setString(7, getKlasse());
+            ps.setInt(8, getUtøverID());
+
+            int i= ps.executeUpdate();
+            if (i!=0) {
+                return true;
+            }
+
+        }catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return false;
+    }
 }
 
 
