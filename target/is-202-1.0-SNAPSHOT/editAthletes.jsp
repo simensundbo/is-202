@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Endre utøver informasjon</title>
+    <title>Endre utøverinformasjon</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/leggInnResultater.css">
 </head>
@@ -41,21 +41,24 @@
 %>
 
     <div class="regform">
+        <div class="regformAthletes">
         <form action="editAthletes" method="post">
-            <h1>Endre utøver infomrasjon</h1>
-            <div class="Filtrer">
+            <h1>Endre utøverinformasjon</h1>
+            <div class="navn">
                 <h2>Endre navn og fødselsår</h2>
                 <input type="text" placeholder="Fornavn" value="<%=model.getFornavn()%>" name="fornavn">
                 <input type="text" placeholder="Etternavn" value="<%=model.getEtternavn()%>" name="etternavn">
-                <input type="text" placeholder="Fødselsår" value="<%=model.getFødeselsår()%>" name="fødselsår">
             </div>
-            <div class="Filtrer">
+            <div class="Resultater">
+            <input type="text" placeholder="Fødselsår" value="<%=model.getFødeselsår()%>" name="fødselsår">
+            </div>
+            <div class="Resultater">
                 <h2>Endre vekt og høyde (Valgfritt)</h2>
                 <input type="text" placeholder="Vekt" value="<%=model.getVekt()%>" name="vekt">
                 <input type="text" placeholder="Høyde" value="<%=model.getHøyde()%>" name="høyde">
             </div>
-            <div class="Filtrer">
-                <h2>Endre på klubb og klasse</h2>
+            <div class="navn">
+                <h2>Endre klubb og klasse</h2>
                 <input type="text" placeholder="Klubb" value="<%=model.getKlubb()%>" name="klubb">
                 <input type="text" placeholder="Klasse" value="<%=model.getKlasse()%>" name="klasse">
             </div>
@@ -63,6 +66,7 @@
                 <button class="SendInn" type="submit" name="Endre!">Endre!</button>
             </div>
         </form>
+        </div>
     </div>
 
 </body>
