@@ -60,11 +60,9 @@
             try {
             Connection con = ConnectionProvider.getCon();
 
-            PreparedStatement ps = con.prepareStatement("select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=?");
-            ps.setString(1, request.getParameter("Klubb"));
-            ps.setString(2, request.getParameter("Fornavn"));
-            ps.setString(3, request.getParameter("Etternavn"));
-            ps.setString(4, request.getParameter("Klasse"));
+            PreparedStatement ps = con.prepareStatement("select * from 202db.results where Uke=? and År=?");
+            ps.setInt(1, Integer.parseInt(request.getParameter("uke")));
+            ps.setInt(2, Integer.parseInt(request.getParameter("aar")));
 
             ResultSet result = ps.executeQuery();
 

@@ -30,34 +30,20 @@
     <div class="søkform">
         <h1>Søk etter resultater</h1>
         <h2>Filtrer ditt søk</h2>
-        <div class="navn">
-            <input class="fornavn" type="text" placeholder="Fornavn" name="Fornavn">
-            <input class="etternavn" type="text" placeholder="Etternavn" name="Etternavn">
-        </div>
-        <div class="Filter">
-            <select class="Klubb" name="Klubb">
-                <option disabled="disabled" selected="selected">Klubb</option>
-                <option> Alle </option>
-                <option value="Arendals"> Arendals Roklubb </option>
-                <option value="Bærum"> Bærum Roklubb </option>
-                <option value="Kristiansand"> Kristiansand Roklubb </option>
-                <option value="Oslo"> Oslo Roklubb </option>
-                <option value="Porsgrunn"> Porsgrunn Roklubb </option>
-            </select>
-        </div>
-        <div class="Filter">
-            <select class="Klubb" name="Klasse">
-                <option disabled="disabled" selected="selected">Klasse</option>
-                <option value="Senior menn"> Senior menn </option>
-                <option value="Senior kvinner"> Senior kvinner </option>
-                <option value="Junior A gutter"> Junior A gutter </option>
-                <option value="Junior A jenter"> Junior A jenter </option>
-                <option value="Junior B gutter"> Junior B gutter </option>
-                <option value="Junior B jenter"> Junior B jenter </option>
-                <option value="Junior C gutter"> Junior C gutter </option>
-                <option value="Junior C jenter"> Junior C jenter </option>
+        <div class="KlasseUkeÅr">
+            <h3>Velg test</h3>
+            <select class="ÅrSøk" name="aar">
+                <option disabled="disabled" selected="selected">År</option>
+                <option value="2020"> 2020 </option>
+                <option value="2019"> 2019 </option>
             </select>
 
+            <select class="UkeSøk" name="uke">
+                <option disabled="disabled" selected="selected">Uke</option>
+                <option value="2"> Uke 2 </option>
+                <option value="11"> Uke 11 </option>
+                <option value="44"> Uke 44 </option>
+            </select>
         </div>
         <div>
             <button class="søk" type="submit" >Vis resultater</button>
