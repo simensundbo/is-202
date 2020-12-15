@@ -30,9 +30,9 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
-            <li><a href="roing.no">Norges Roforbund</a></li>
-            <li><a href="#">Kontakt oss</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
+            <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
+            <li><a href="contactUs.jsp">Kontakt oss</a></li>
         </ul>
 
     </nav>
@@ -43,8 +43,7 @@
     }
     %>
 </header>
-
-<h1>Her kan du endre, legge til eller slette en utøver.</h1> <br>
+<h1>Utøver informasjon</h1> <br>
 <table class="table table-hover" id="utøvere"  border="2">
     <thead>
     <tr>

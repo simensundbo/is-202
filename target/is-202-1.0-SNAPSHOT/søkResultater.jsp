@@ -3,19 +3,18 @@
 <head>
     <title>Søk etter resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/søkResultater.css">
     <link rel="stylesheet" href="css/navbar.css" >
-
+    <link rel="stylesheet" href="css/søkResultater.css">
 </head>
-<body>
+<body class="bakgrund">
 <header>
     <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="">Resultater</a></li>
-            <li><a href="roing.no">Norges Roforbund</a></li>
-            <li><a href="#">Kontakt oss</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
+            <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
+            <li><a href="contactUs.jsp">Kontakt oss</a></li>
         </ul>
 
     </nav>
@@ -26,6 +25,7 @@
     }
     %>
 </header>
+
 <form action="searchResults.jsp" method="get">
     <div class="søkform">
         <h1>Søk etter resultater</h1>
@@ -46,7 +46,7 @@
             </select>
         </div>
         <div>
-            <button class="søk" type="submit" >Vis resultater</button>
+            <button class="søk" type="submit">Vis resultater!</button>
         </div>
     </div>
 </form>

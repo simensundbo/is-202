@@ -2,9 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: beige;
     height: 100vh;
-    overflow: hidden;
+}
+
+.bakgrund{
+    background-image: url("../images/Norske ro årer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 .søkform {
     position: absolute;
@@ -65,17 +71,13 @@ body {
     margin-left: 5px;
 }
 .søk{
-    position: absolute;
-    left: 210px;
-    width: 130px;
+    position: center;
+    width: auto;
     margin-top: 30px;
-    height: 35px;
-    border: 1px solid;
     background: green;
     border-radius: 10px;
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 600;
     cursor: pointer;
-    outline: none;
 }

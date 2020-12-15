@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/leggInnResultater.css">
 </head>
-<body>
+<body class="bakgrund">
 <header>
     <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
     <nav class="navbar">

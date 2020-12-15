@@ -2,12 +2,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background-color: beige;
     height: 100vh;
 }
+
+.bakgrund{
+    background-image: url("../images/Norske ro årer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .regform {
     position: relative;
-    top: 35%;
+    top: 50%;
     left: 50%;
     height: 650px;
     margin-top: 10px;

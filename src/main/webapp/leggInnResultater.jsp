@@ -4,19 +4,18 @@
     <meta charset="utf-8">
     <title>Nye resultater</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/leggInnResultater.css">
-    <link rel="stylesheet" href="css/navbar.css" >
-
 </head>
-<body>
+<body class="bakgrund">
 <header>
     <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
-            <li><a href="roing.no">Norges Roforbund</a></li>
-            <li><a href="#">Kontakt oss</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
+            <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
+            <li><a href="contactUs.jsp">Kontakt oss</a></li>
         </ul>
 
     </nav>
@@ -27,7 +26,6 @@
     }
     %>
 </header>
-
 
 <div class="regform">
     <form action="addResults" method="post">

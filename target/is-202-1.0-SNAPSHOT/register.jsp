@@ -4,11 +4,31 @@
         <meta charset="utf-8">
         <title>Registrer deg</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/navbar.css" >
         <link rel="stylesheet" href="css/styles.css" >
     </head>
 
     <body>
-        <div class="login-box">
+    <header>
+        <a class="logo" href="index.jsp"><img class="logo" src="images/norges%20roforbund.png"></a>
+        <nav class="navbar">
+            <ul class="nav_links">
+                <li><a href="#">Klubber</a></li>
+                <li><a href="getAthletes">Utøvere</a></li>
+                <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
+                <li><a href="contactUs.jsp">Kontakt oss</a></li>
+            </ul>
+
+        </nav>
+        <% if(session.getAttribute("user")==null) {
+            out.print("<a href=\"login.jsp\"><button>Logg inn</button></a>");
+        } else {
+            out.print("<a href=\"logout\"><button>Logg ut</button></a>");
+        }
+        %>
+    </header>
+
+    <div class="login-box">
             <h1>Registrer deg</h1>
             <form action="register" method="post">
                 <div class="textbox">

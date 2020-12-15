@@ -19,9 +19,9 @@
     <nav class="navbar">
         <ul class="nav_links">
             <li><a href="#">Klubber</a></li>
-            <li><a href="allResults.jsp">Resultater</a></li>
-            <li><a href="roing.no">Norges Roforbund</a></li>
-            <li><a href="#">Kontakt oss</a></li>
+            <li><a href="getAthletes">Utøvere</a></li>
+            <li><a href="https://www.roing.no/">Norges Roforbund</a></li>
+            <li><a href="contactUs.jsp">Kontakt oss</a></li>
         </ul>
 
     </nav>
