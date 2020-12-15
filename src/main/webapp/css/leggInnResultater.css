@@ -7,15 +7,17 @@ body {
 }
 .regform {
     position: relative;
-    top: 50%;
+    top: 35%;
     left: 50%;
-    height: 630px;
+    height: 650px;
     margin-top: 10px;
     margin-bottom: 30px;
     transform: translate(-50%, -50%);
     width: 510px;
     background: white;
     border-radius: 20px;
+    border: 2px solid #73AD21;
+    padding: 20px;
 }
 .regform form {
     padding: 20px;
@@ -74,6 +76,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    line-height: 50%;
 }
 .SendInn{
     margin-top: 25px;
