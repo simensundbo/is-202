@@ -8,17 +8,16 @@ public class ConnectionProvider {   //singleton design pattern.
 
     static {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://mysql-202db-do-user-7402814-0.b.db.ondigitalocean.com:25060/202db","doadmin","yqxnw3zwsbrjfd6u");
+            Class.forName("org.mariadb.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/test202","simen","simen123");
 
         } catch (Exception e) {
             System.out.println("Tilkoblingen feilet.");
-            e.printStackTrace();
         }
 
     }
-        public static Connection getCon(){
-            return con;
-        }
+    public static Connection getCon(){
+        return con;
+    }
 
 }

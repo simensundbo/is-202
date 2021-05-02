@@ -19,10 +19,10 @@ public class AthletesModel {
     private String klubb;
     private String klasse;
 
-    private final String allAthletesSQL = ("select * from 202db.athletes;");
-    private final String deleteSQL = ("delete from 202db.athletes where UtøverID=?;");
-    private final String athleteByIdSQL = ("select * from 202db.athletes where UtøverID=?;");
-    private final String updateSQL = ("update 202db.athletes set Fornavn=?, Etternavn=?, Fødselsår=?, Vekt=?, Høyde=?, Klubb=?, Klasse=? where UtøverID=?;");
+    private final String allAthletesSQL = ("select * from test202.athletes;");
+    private final String deleteSQL = ("delete from test202.athletes where UtøverID=?;");
+    private final String athleteByIdSQL = ("select * from test202.athletes where UtøverID=?;");
+    private final String updateSQL = ("update test202.athletes set Fornavn=?, Etternavn=?, Fødselsår=?, Vekt=?, Høyde=?, Klubb=?, Klasse=? where UtøverID=?;");
 
     public int getUtøverID() {
         return utøverID;

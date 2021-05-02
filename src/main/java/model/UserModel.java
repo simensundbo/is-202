@@ -10,8 +10,8 @@ public class UserModel {
     private String pass;
     private String userRole;
 
-    private final String registerUserSql = "insert into 202db.login (uname, pass) values (?,?)";
-    private final String userLoginSql = "SELECT * FROM 202db.login where uname=? and pass=?";
+    private final String registerUserSql = "insert into test202.login (uname, pass) values (?,?)";
+    private final String userLoginSql = "SELECT * FROM test202.login where uname=? and pass=?";
 
     public String getName() {
         return Name;

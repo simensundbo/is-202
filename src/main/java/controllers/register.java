@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Base64;
 
 @WebServlet(name = "register", urlPatterns = "/register")
 public class register extends HttpServlet {
@@ -33,8 +34,12 @@ public class register extends HttpServlet {
 
         UserModel model = new UserModel();
 
+        Base64.Encoder encoder = Base64.getEncoder();
+
+        String es = encoder.encodeToString(p.getBytes());
+
         model.setName(u);
-        model.setPass(p);
+        model.setPass(es);
 
         boolean status = model.registerUser();
 

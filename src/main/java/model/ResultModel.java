@@ -31,13 +31,13 @@ public class ResultModel {
     private int sargeant;
     private int kroppshev;
 
-    private final String addResultSQL= "insert into 202db.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
-    private final String searchSQL= "select * from 202db.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?;";
-    private final String deleteSQL= "delete from 202db.results where ResultatID=?;";
-    private final String updateSQL= "update 202db.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
-    private final String resultByIdSQL= "select * from 202db.results where ResultatID=?;";
-    private final String listAllResultsSQL = "select * from 202db.results;";
-    private final String newestResultsSQL = "select * from 202db.results where uke=44;";
+    private final String addResultSQL= "insert into test202.results(år, uke, fornavn, etternavn, klasse, klubb, `5000_watt`, `5000_tid`, `3000_tid`, `2000_tid`, `2000_watt`, `60_watt`, liggro_kilo, liggro_prosent, knebøy_kilo, knebøy_prosent, bevegelighet, sargeant_cm, kroppshev) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    private final String searchSQL= "select * from test202.results where klubb=? and Fornavn=? and Etternavn=? and Klasse=? and Uke=? and År=?;";
+    private final String deleteSQL= "delete from test202.results where ResultatID=?;";
+    private final String updateSQL= "update test202.results set år=?, uke=?, Score=?, fornavn=?, etternavn=?, klasse=?, klubb=?, 5000_watt=?, 5000_tid=?, 3000_tid=?, 2000_tid=?, 2000_watt=?, 60_watt=?, liggro_kilo=?, liggro_prosent=?, knebøy_kilo=?, knebøy_prosent=?, bevegelighet=?, sargeant_cm=?, kroppshev=? where ResultatID=?;";
+    private final String resultByIdSQL= "select * from test202.results where ResultatID=?;";
+    private final String listAllResultsSQL = "select * from test202.results;";
+    private final String newestResultsSQL = "select * from test202.results where uke=44;";
 
     public int getResultatID() {
         return resultatID;
